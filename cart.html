@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>高機能マウンテンパーカー - UrbanWear Japan</title>
+    <title>カート - UrbanWear Japan</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -36,17 +36,22 @@
     <!-- メインコンテンツ -->
     <main class="main-content">
         <div class="container">
-            <div class="product-detail">
-                <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=500&h=400&fit=crop&crop=center"
-                    alt="高機能マウンテンパーカー" class="product-image-large">
-                <div class="product-info">
-                    <h1>高機能マウンテンパーカー</h1>
-                    <div class="product-price-large">12,800円</div>
-                    <div class="product-description">
-                        <p>アウトドアから日常使いまで対応する高機能マウンテンパーカーです。防水・防風機能を備え、軽量で快適な着心地を実現しています。</p>
-                        <p>都市部での通勤やレジャー、アウトドア活動など、様々なシーンで活躍する万能なアウターです。</p>
+            <h1>ショッピングカート</h1>
+            
+            <div class="cart-container">
+                <div id="cart-items">
+                    <!-- カートアイテムがここに動的に表示されます -->
+                </div>
+                
+                <div class="cart-summary">
+                    <div class="cart-total-row">
+                        <span>合計金額:</span>
+                        <span id="cart-total-amount">¥0</span>
                     </div>
-                    <button class="btn add-to-cart-btn" data-product-id="urbanwear-parka" data-product-name="高機能マウンテンパーカー" data-product-price="12800" data-product-image="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=500&h=400&fit=crop&crop=center">カートに入れる</button>
+                    <div class="cart-actions">
+                        <button class="btn btn-secondary" onclick="cart.clearCart()">カートをクリア</button>
+                        <button class="btn" onclick="alert('購入手続きは現在開発中です')">購入手続きへ</button>
+                    </div>
                 </div>
             </div>
         </div>

@@ -16,12 +16,19 @@
                 <div class="logo">UrbanWear Japan</div>
                 <nav>
                     <ul>
+                        <li><a href="index.html">ホーム</a></li>
                         <li><a href="tops.html">トップス</a></li>
                         <li><a href="outer.html">アウター</a></li>
                         <li><a href="campaign.html">セール</a></li>
+                        <li><a href="login.html">ログイン</a></li>
                         <li><a href="register.html">会員登録</a></li>
                     </ul>
                 </nav>
+                <div class="cart-icon" id="cart-icon">
+                    🛒
+                    <span class="cart-count" id="cart-count">0</span>
+                    <span class="cart-total" id="cart-total">¥0</span>
+                </div>
             </div>
         </div>
     </header>
@@ -33,64 +40,64 @@
             <p>都会のライフスタイルに最適化された、機能性とデザイン性を両立したトップスコレクション</p>
 
             <div class="products-grid">
-                <div class="product-card">
+                <div class="product-card" data-product-id="premium-knit-sweater">
                     <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=300&h=200&fit=crop&crop=center"
                         alt="プレミアムニットセーター" class="product-image">
                     <div class="product-name">プレミアムニットセーター</div>
                     <div class="product-price">8,900円</div>
                     <div class="button-group">
                         <a href="#" class="btn btn-secondary">詳細を見る</a>
-                        <a href="#" class="btn">カートに入れる</a>
+                        <button class="btn add-to-cart-btn">カートに入れる</button>
                     </div>
                 </div>
-                <div class="product-card">
+                <div class="product-card" data-product-id="organic-cotton-tshirt">
                     <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=300&h=200&fit=crop&crop=center"
                         alt="オーガニックコットンTシャツ" class="product-image">
                     <div class="product-name">オーガニックコットンTシャツ</div>
                     <div class="product-price">3,200円</div>
                     <div class="button-group">
                         <a href="#" class="btn btn-secondary">詳細を見る</a>
-                        <a href="#" class="btn">カートに入れる</a>
+                        <button class="btn add-to-cart-btn">カートに入れる</button>
                     </div>
                 </div>
-                <div class="product-card">
+                <div class="product-card" data-product-id="light-knit-vest">
                     <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=300&h=200&fit=crop&crop=center"
                         alt="ライトニットベスト" class="product-image">
                     <div class="product-name">ライトニットベスト</div>
                     <div class="product-price">5,800円</div>
                     <div class="button-group">
                         <a href="#" class="btn btn-secondary">詳細を見る</a>
-                        <a href="#" class="btn">カートに入れる</a>
+                        <button class="btn add-to-cart-btn">カートに入れる</button>
                     </div>
                 </div>
-                <div class="product-card">
+                <div class="product-card" data-product-id="silk-blend-blouse">
                     <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=300&h=200&fit=crop&crop=center"
                         alt="シルクブレンドブラウス" class="product-image">
                     <div class="product-name">シルクブレンドブラウス</div>
                     <div class="product-price">12,500円</div>
                     <div class="button-group">
                         <a href="product_blouse.html" class="btn btn-secondary">詳細を見る</a>
-                        <a href="#" class="btn">カートに入れる</a>
+                        <button class="btn add-to-cart-btn">カートに入れる</button>
                     </div>
                 </div>
-                <div class="product-card">
+                <div class="product-card" data-product-id="mens-casual-shirt">
                     <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=300&h=200&fit=crop&crop=center"
                         alt="メンズカジュアルシャツ" class="product-image">
                     <div class="product-name">メンズカジュアルシャツ</div>
                     <div class="product-price">6,800円</div>
                     <div class="button-group">
                         <a href="product_shirt.html" class="btn btn-secondary">詳細を見る</a>
-                        <a href="#" class="btn">カートに入れる</a>
+                        <button class="btn add-to-cart-btn">カートに入れる</button>
                     </div>
                 </div>
-                <div class="product-card">
+                <div class="product-card" data-product-id="layered-knit">
                     <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=300&h=200&fit=crop&crop=center"
                         alt="レイヤードニット" class="product-image">
                     <div class="product-name">レイヤードニット</div>
                     <div class="product-price">7,500円</div>
                     <div class="button-group">
                         <a href="product_layered_knit.html" class="btn btn-secondary">詳細を見る</a>
-                        <a href="#" class="btn">カートに入れる</a>
+                        <button class="btn add-to-cart-btn">カートに入れる</button>
                     </div>
                 </div>
             </div>
@@ -110,6 +117,8 @@
             </div>
         </div>
     </footer>
+
+    <script src="cart.js"></script>
 </body>
 
 </html>

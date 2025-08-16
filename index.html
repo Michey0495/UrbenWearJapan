@@ -23,6 +23,11 @@
                         <li><a href="register.html">会員登録</a></li>
                     </ul>
                 </nav>
+                <div class="cart-icon" id="cart-icon">
+                    🛒
+                    <span class="cart-count" id="cart-count">0</span>
+                    <span class="cart-total" id="cart-total">¥0</span>
+                </div>
             </div>
         </div>
     </header>
@@ -40,34 +45,34 @@
             <section>
                 <h2>Featured Products</h2>
                 <div class="products-grid">
-                    <div class="product-card">
+                    <div class="product-card" data-product-id="urbanwear-parka">
                         <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=300&h=200&fit=crop&crop=center"
                             alt="高機能マウンテンパーカー" class="product-image">
                         <div class="product-name">高機能マウンテンパーカー</div>
                         <div class="product-price">12,800円</div>
                         <div class="button-group">
                             <a href="product_urbanwear.html" class="btn btn-secondary">詳細を見る</a>
-                            <a href="#" class="btn">カートに入れる</a>
+                            <button class="btn add-to-cart-btn">カートに入れる</button>
                         </div>
                     </div>
-                    <div class="product-card">
+                    <div class="product-card" data-product-id="city-shell-jacket">
                         <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=300&h=200&fit=crop&crop=center"
                             alt="シティ・シェルジャケット" class="product-image">
                         <div class="product-name">シティ・シェルジャケット</div>
                         <div class="product-price">11,500円</div>
                         <div class="button-group">
                             <a href="product_tokyo.html" class="btn btn-secondary">詳細を見る</a>
-                            <a href="#" class="btn">カートに入れる</a>
+                            <button class="btn add-to-cart-btn">カートに入れる</button>
                         </div>
                     </div>
-                    <div class="product-card">
+                    <div class="product-card" data-product-id="premium-knit-sweater">
                         <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=300&h=200&fit=crop&crop=center"
                             alt="プレミアムニットセーター" class="product-image">
                         <div class="product-name">プレミアムニットセーター</div>
                         <div class="product-price">8,900円</div>
                         <div class="button-group">
                             <a href="#" class="btn btn-secondary">詳細を見る</a>
-                            <a href="#" class="btn">カートに入れる</a>
+                            <button class="btn add-to-cart-btn">カートに入れる</button>
                         </div>
                     </div>
                 </div>
@@ -88,6 +93,8 @@
             </div>
         </div>
     </footer>
+
+    <script src="cart.js"></script>
 </body>
 
 </html>
