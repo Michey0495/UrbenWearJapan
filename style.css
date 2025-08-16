@@ -161,6 +161,18 @@ footer {
     background-color: #357ABD;
 }
 
+.button-group {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.button-group .btn {
+    flex: 1;
+    font-size: 0.9rem;
+    padding: 0.5rem 0.75rem;
+}
+
 /* フォーム */
 .form-group {
     margin-bottom: 1.5rem;
