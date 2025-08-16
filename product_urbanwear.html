@@ -13,7 +13,9 @@
     <header>
         <div class="container">
             <div class="header-content">
-                <div class="logo">UrbanWear Japan</div>
+                <div class="logo">
+                    <a href="index.html">UrbanWear Japan</a>
+                </div>
                 <nav>
                     <ul>
                         <li><a href="index.html">ホーム</a></li>
@@ -24,10 +26,14 @@
                         <li><a href="register.html">会員登録</a></li>
                     </ul>
                 </nav>
-                <div class="cart-icon" id="cart-icon">
-                    🛒
-                    <span class="cart-count" id="cart-count">0</span>
-                    <span class="cart-total" id="cart-total">¥0</span>
+                <div class="header-actions">
+                    <a href="cart.html" class="cart-link">
+                        <div class="cart-icon" id="cart-icon">
+                            🛒
+                            <span class="cart-count" id="cart-count">0</span>
+                            <span class="cart-total" id="cart-total">¥0</span>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -36,19 +42,296 @@
     <!-- メインコンテンツ -->
     <main class="main-content">
         <div class="container">
+            <!-- パンくずリスト -->
+            <nav class="breadcrumb" aria-label="パンくずリスト">
+                <ol>
+                    <li><a href="index.html">ホーム</a></li>
+                    <li><a href="outer.html">アウター</a></li>
+                    <li aria-current="page">高機能マウンテンパーカー</li>
+                </ol>
+            </nav>
+
             <div class="product-detail">
-                <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=500&h=400&fit=crop&crop=center"
-                    alt="高機能マウンテンパーカー" class="product-image-large">
+                <!-- 商品画像セクション -->
+                <div class="product-images">
+                    <div class="main-image">
+                        <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=500&h=400&fit=crop&crop=center"
+                            alt="高機能マウンテンパーカー" class="product-image-large" id="main-image">
+                    </div>
+                    <div class="thumbnail-images">
+                        <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=100&h=80&fit=crop&crop=center"
+                            alt="高機能マウンテンパーカー サムネイル1" class="thumbnail active"
+                            data-image="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=500&h=400&fit=crop&crop=center">
+                        <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=100&h=80&fit=crop&crop=center"
+                            alt="高機能マウンテンパーカー サムネイル2" class="thumbnail"
+                            data-image="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=500&h=400&fit=crop&crop=center">
+                        <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=100&h=80&fit=crop&crop=center"
+                            alt="高機能マウンテンパーカー サムネイル3" class="thumbnail"
+                            data-image="https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=500&h=400&fit=crop&crop=center">
+                    </div>
+                </div>
+
+                <!-- 商品情報セクション -->
                 <div class="product-info">
                     <h1>高機能マウンテンパーカー</h1>
-                    <div class="product-price-large">12,800円</div>
+
+                    <!-- 商品評価 -->
+                    <div class="product-rating-large">
+                        <div class="stars">★★★★★</div>
+                        <span class="rating-score">4.8</span>
+                        <span class="review-count">(35件のレビュー)</span>
+                        <a href="#reviews" class="write-review-link">レビューを書く</a>
+                    </div>
+
+                    <!-- 価格情報 -->
+                    <div class="product-price-large">
+                        <span class="current-price">¥12,800</span>
+                        <span class="original-price">¥16,000</span>
+                        <span class="discount-badge">20%OFF</span>
+                    </div>
+
+                    <!-- 商品説明 -->
                     <div class="product-description">
                         <p>アウトドアから日常使いまで対応する高機能マウンテンパーカーです。防水・防風機能を備え、軽量で快適な着心地を実現しています。</p>
                         <p>都市部での通勤やレジャー、アウトドア活動など、様々なシーンで活躍する万能なアウターです。</p>
                     </div>
-                    <button class="btn add-to-cart-btn" data-product-id="urbanwear-parka" data-product-name="高機能マウンテンパーカー" data-product-price="12800" data-product-image="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=500&h=400&fit=crop&crop=center">カートに入れる</button>
+
+                    <!-- 商品スペック -->
+                    <div class="product-specs">
+                        <h3>商品スペック</h3>
+                        <ul>
+                            <li><strong>素材:</strong> ナイロン100%</li>
+                            <li><strong>防水性:</strong> 10,000mm</li>
+                            <li><strong>透湿性:</strong> 8,000g/m²/24h</li>
+                            <li><strong>重量:</strong> 約450g</li>
+                            <li><strong>生産国:</strong> 日本</li>
+                        </ul>
+                    </div>
+
+                    <!-- カラー選択 -->
+                    <div class="product-options">
+                        <div class="option-group">
+                            <label>カラー:</label>
+                            <div class="color-options">
+                                <input type="radio" name="color" id="color-black" value="black" checked>
+                                <label for="color-black" class="color-option-large" style="background-color: #000000;"
+                                    title="ブラック">ブラック</label>
+
+                                <input type="radio" name="color" id="color-brown" value="brown">
+                                <label for="color-brown" class="color-option-large" style="background-color: #8B4513;"
+                                    title="ブラウン">ブラウン</label>
+
+                                <input type="radio" name="color" id="color-navy" value="navy">
+                                <label for="color-navy" class="color-option-large" style="background-color: #4169E1;"
+                                    title="ネイビー">ネイビー</label>
+                            </div>
+                        </div>
+
+                        <!-- サイズ選択 -->
+                        <div class="option-group">
+                            <label>サイズ:</label>
+                            <div class="size-options">
+                                <input type="radio" name="size" id="size-s" value="S">
+                                <label for="size-s" class="size-option">S</label>
+
+                                <input type="radio" name="size" id="size-m" value="M" checked>
+                                <label for="size-m" class="size-option">M</label>
+
+                                <input type="radio" name="size" id="size-l" value="L">
+                                <label for="size-l" class="size-option">L</label>
+
+                                <input type="radio" name="size" id="size-xl" value="XL">
+                                <label for="size-xl" class="size-option">XL</label>
+                            </div>
+                        </div>
+
+                        <!-- 数量選択 -->
+                        <div class="option-group">
+                            <label>数量:</label>
+                            <div class="quantity-selector">
+                                <button type="button" class="quantity-btn" onclick="changeQuantity(-1)">-</button>
+                                <input type="number" id="quantity" value="1" min="1" max="10" class="quantity-input">
+                                <button type="button" class="quantity-btn" onclick="changeQuantity(1)">+</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- アクションボタン -->
+                    <div class="product-actions">
+                        <button class="btn btn-primary add-to-cart-btn" data-product-id="urbanwear-parka"
+                            data-product-name="高機能マウンテンパーカー" data-product-price="12800"
+                            data-product-image="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=500&h=400&fit=crop&crop=center">
+                            カートに入れる
+                        </button>
+                        <button class="btn btn-outline wishlist-btn">❤ お気に入り</button>
+                    </div>
+
+                    <!-- 配送・返品情報 -->
+                    <div class="shipping-info">
+                        <div class="info-item">
+                            <span class="icon">🚚</span>
+                            <span>通常2-3営業日で発送</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="icon">🔄</span>
+                            <span>30日以内返品可能</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="icon">💳</span>
+                            <span>各種クレジットカード対応</span>
+                        </div>
+                    </div>
                 </div>
             </div>
+
+            <!-- 商品詳細タブ -->
+            <div class="product-tabs">
+                <div class="tab-navigation">
+                    <button class="tab-btn active" data-tab="description">商品詳細</button>
+                    <button class="tab-btn" data-tab="specs">スペック</button>
+                    <button class="tab-btn" data-tab="reviews" id="reviews">レビュー</button>
+                    <button class="tab-btn" data-tab="qanda">Q&A</button>
+                </div>
+
+                <div class="tab-content">
+                    <div class="tab-panel active" id="description">
+                        <h3>商品詳細</h3>
+                        <p>この高機能マウンテンパーカーは、アウトドア活動から日常使いまで幅広く対応できる万能なアウターです。</p>
+                        <h4>主な特徴</h4>
+                        <ul>
+                            <li><strong>防水性:</strong> 10,000mmの防水性で、激しい雨でも安心</li>
+                            <li><strong>透湿性:</strong> 汗を外に逃がし、快適な着心地を実現</li>
+                            <li><strong>軽量性:</strong> 約450gの軽量設計で、長時間の着用も快適</li>
+                            <li><strong>収納性:</strong> コンパクトに折りたたんで収納可能</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-panel" id="specs">
+                        <h3>商品スペック</h3>
+                        <table class="specs-table">
+                            <tr>
+                                <th>素材</th>
+                                <td>ナイロン100%</td>
+                            </tr>
+                            <tr>
+                                <th>防水性</th>
+                                <td>10,000mm</td>
+                            </tr>
+                            <tr>
+                                <th>透湿性</th>
+                                <td>8,000g/m²/24h</td>
+                            </tr>
+                            <tr>
+                                <th>重量</th>
+                                <td>約450g</td>
+                            </tr>
+                            <tr>
+                                <th>生産国</th>
+                                <td>日本</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="tab-panel" id="reviews">
+                        <h3>レビュー (35件)</h3>
+                        <div class="reviews-summary">
+                            <div class="overall-rating">
+                                <div class="rating-big">4.8</div>
+                                <div class="stars-big">★★★★★</div>
+                                <div class="total-reviews">35件のレビュー</div>
+                            </div>
+                        </div>
+
+                        <div class="review-item">
+                            <div class="review-header">
+                                <div class="reviewer-name">田中さん</div>
+                                <div class="review-rating">★★★★★</div>
+                                <div class="review-date">2025/01/15</div>
+                            </div>
+                            <div class="review-title">軽くて快適</div>
+                            <div class="review-content">
+                                通勤で毎日着ていますが、軽くて快適です。雨の日も安心して歩けます。
+                            </div>
+                        </div>
+
+                        <div class="review-item">
+                            <div class="review-header">
+                                <div class="reviewer-name">佐藤さん</div>
+                                <div class="review-rating">★★★★☆</div>
+                                <div class="review-date">2025/01/10</div>
+                            </div>
+                            <div class="review-title">デザインが良い</div>
+                            <div class="review-content">
+                                機能性だけでなく、デザインも良いので普段使いに最適です。
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-panel" id="qanda">
+                        <h3>よくある質問</h3>
+                        <div class="qa-item">
+                            <div class="qa-question">サイズはどのように選べばよいですか？</div>
+                            <div class="qa-answer">
+                                身長と体重を参考にしてください。Mサイズが最も人気で、多くの方に合います。
+                            </div>
+                        </div>
+                        <div class="qa-item">
+                            <div class="qa-question">洗濯はどのようにすればよいですか？</div>
+                            <div class="qa-answer">
+                                30度以下の冷水で手洗いすることをお勧めします。ドライクリーニングも可能です。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 関連商品 -->
+            <section class="related-products">
+                <h2>関連商品</h2>
+                <div class="products-grid">
+                    <div class="product-card" data-product-id="city-shell-jacket" data-price="11500"
+                        data-category="jacket">
+                        <div class="product-image-container">
+                            <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=300&h=200&fit=crop&crop=center"
+                                alt="シティ・シェルジャケット" class="product-image">
+                            <div class="product-overlay">
+                                <button class="btn btn-primary quick-view-btn">クイックビュー</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">シティ・シェルジャケット</div>
+                            <div class="product-price">
+                                <span class="current-price">¥11,500</span>
+                            </div>
+                        </div>
+                        <div class="button-group">
+                            <a href="product_tokyo.html" class="btn btn-secondary">詳細を見る</a>
+                            <button class="btn add-to-cart-btn">カートに入れる</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-product-id="light-down-jacket" data-price="15800"
+                        data-category="jacket">
+                        <div class="product-image-container">
+                            <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=300&h=200&fit=crop&crop=center"
+                                alt="ライトダウンジャケット" class="product-image">
+                            <div class="product-overlay">
+                                <button class="btn btn-primary quick-view-btn">クイックビュー</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">ライトダウンジャケット</div>
+                            <div class="product-price">
+                                <span class="current-price">¥15,800</span>
+                            </div>
+                        </div>
+                        <div class="button-group">
+                            <a href="product_down_jacket.html" class="btn btn-secondary">詳細を見る</a>
+                            <button class="btn add-to-cart-btn">カートに入れる</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
     </main>
 
@@ -56,17 +339,51 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-links">
-                    <a href="#">会社概要</a>
-                    <a href="#">プライバシーポリシー</a>
-                    <a href="#">お問い合わせ</a>
+                <div class="footer-section">
+                    <h3>UrbanWear Japan</h3>
+                    <p>都会で働くあなたに寄り添う、シンプルで機能的なアパレルブランド</p>
                 </div>
-                <div class="copyright">© 2025 UrbanWear Japan</div>
+                <div class="footer-section">
+                    <h4>ショッピング</h4>
+                    <ul>
+                        <li><a href="tops.html">トップス</a></li>
+                        <li><a href="outer.html">アウター</a></li>
+                        <li><a href="campaign.html">セール</a></li>
+                        <li><a href="cart.html">カート</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>サポート</h4>
+                    <ul>
+                        <li><a href="#">お問い合わせ</a></li>
+                        <li><a href="#">サイズガイド</a></li>
+                        <li><a href="#">配送について</a></li>
+                        <li><a href="#">返品・交換</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>会社情報</h4>
+                    <ul>
+                        <li><a href="#">会社概要</a></li>
+                        <li><a href="#">プライバシーポリシー</a></li>
+                        <li><a href="#">利用規約</a></li>
+                        <li><a href="#">採用情報</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="copyright">© 2025 UrbanWear Japan. All rights reserved.</div>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram">📷</a>
+                    <a href="#" aria-label="Twitter">🐦</a>
+                    <a href="#" aria-label="Facebook">📘</a>
+                </div>
             </div>
         </div>
     </footer>
 
     <script src="cart.js"></script>
+    <script src="product-detail.js"></script>
 </body>
 
 </html>

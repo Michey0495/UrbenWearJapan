@@ -13,7 +13,9 @@
     <header>
         <div class="container">
             <div class="header-content">
-                <div class="logo">UrbanWear Japan</div>
+                <div class="logo">
+                    <a href="index.html">UrbanWear Japan</a>
+                </div>
                 <nav>
                     <ul>
                         <li><a href="index.html">ホーム</a></li>
@@ -24,10 +26,14 @@
                         <li><a href="register.html">会員登録</a></li>
                     </ul>
                 </nav>
-                <div class="cart-icon" id="cart-icon">
-                    🛒
-                    <span class="cart-count" id="cart-count">0</span>
-                    <span class="cart-total" id="cart-total">¥0</span>
+                <div class="header-actions">
+                    <a href="cart.html" class="cart-link">
+                        <div class="cart-icon" id="cart-icon">
+                            🛒
+                            <span class="cart-count" id="cart-count">0</span>
+                            <span class="cart-total" id="cart-total">¥0</span>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -36,70 +42,219 @@
     <!-- メインコンテンツ -->
     <main class="main-content">
         <div class="container">
-            <h1>アウター</h1>
-            <p>機能性とスタイルを両立した、都会のライフスタイルに最適化されたアウターコレクション</p>
+            <!-- ページヘッダー -->
+            <div class="page-header">
+                <h1>アウター</h1>
+                <p>機能性とスタイルを両立した、都会のライフスタイルに最適化されたアウターコレクション</p>
+            </div>
 
+            <!-- フィルターとソート -->
+            <div class="filters-section">
+                <div class="search-box">
+                    <input type="text" placeholder="商品を検索..." id="search-input">
+                    <button type="button" class="search-btn">🔍</button>
+                </div>
+                <div class="filter-controls">
+                    <select id="sort-select" class="sort-select">
+                        <option value="popular">人気順</option>
+                        <option value="price-low">価格が安い順</option>
+                        <option value="price-high">価格が高い順</option>
+                        <option value="new">新着順</option>
+                    </select>
+                    <div class="price-filter">
+                        <label>価格範囲:</label>
+                        <input type="range" id="price-range" min="0" max="30000" value="30000">
+                        <span id="price-value">¥30,000以下</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 商品グリッド -->
             <div class="products-grid">
-                <div class="product-card" data-product-id="mountain-parka">
-                    <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=300&h=200&fit=crop&crop=center"
-                        alt="高機能マウンテンパーカー" class="product-image">
-                    <div class="product-name">高機能マウンテンパーカー</div>
-                    <div class="product-price">12,800円</div>
+                <div class="product-card" data-product-id="mountain-parka" data-price="12800" data-category="jacket">
+                    <div class="product-image-container">
+                        <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=300&h=200&fit=crop&crop=center"
+                            alt="高機能マウンテンパーカー" class="product-image">
+                        <div class="product-overlay">
+                            <button class="btn btn-primary quick-view-btn">クイックビュー</button>
+                        </div>
+                        <div class="product-badge sale">SALE</div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-name">高機能マウンテンパーカー</div>
+                        <div class="product-price">
+                            <span class="current-price">¥12,800</span>
+                            <span class="original-price">¥16,000</span>
+                        </div>
+                        <div class="product-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="review-count">(35件)</span>
+                        </div>
+                        <div class="product-colors">
+                            <span class="color-option" style="background-color: #000000;" title="ブラック"></span>
+                            <span class="color-option" style="background-color: #8B4513;" title="ブラウン"></span>
+                            <span class="color-option" style="background-color: #4169E1;" title="ネイビー"></span>
+                        </div>
+                    </div>
                     <div class="button-group">
                         <a href="product_urbanwear.html" class="btn btn-secondary">詳細を見る</a>
                         <button class="btn add-to-cart-btn">カートに入れる</button>
                     </div>
                 </div>
-                <div class="product-card" data-product-id="city-shell-jacket">
-                    <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=300&h=200&fit=crop&crop=center"
-                        alt="シティ・シェルジャケット" class="product-image">
-                    <div class="product-name">シティ・シェルジャケット</div>
-                    <div class="product-price">11,500円</div>
+
+                <div class="product-card" data-product-id="city-shell-jacket" data-price="11500" data-category="jacket">
+                    <div class="product-image-container">
+                        <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=300&h=200&fit=crop&crop=center"
+                            alt="シティ・シェルジャケット" class="product-image">
+                        <div class="product-overlay">
+                            <button class="btn btn-primary quick-view-btn">クイックビュー</button>
+                        </div>
+                        <div class="product-badge new">NEW</div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-name">シティ・シェルジャケット</div>
+                        <div class="product-price">
+                            <span class="current-price">¥11,500</span>
+                        </div>
+                        <div class="product-rating">
+                            <span class="stars">★★★★☆</span>
+                            <span class="review-count">(22件)</span>
+                        </div>
+                        <div class="product-colors">
+                            <span class="color-option" style="background-color: #FFFFFF;" title="ホワイト"></span>
+                            <span class="color-option" style="background-color: #000000;" title="ブラック"></span>
+                            <span class="color-option" style="background-color: #808080;" title="グレー"></span>
+                        </div>
+                    </div>
                     <div class="button-group">
                         <a href="product_tokyo.html" class="btn btn-secondary">詳細を見る</a>
                         <button class="btn add-to-cart-btn">カートに入れる</button>
                     </div>
                 </div>
-                <div class="product-card" data-product-id="light-down-jacket">
-                    <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=300&h=200&fit=crop&crop=center"
-                        alt="ライトダウンジャケット" class="product-image">
-                    <div class="product-name">ライトダウンジャケット</div>
-                    <div class="product-price">15,800円</div>
+
+                <div class="product-card" data-product-id="light-down-jacket" data-price="15800" data-category="jacket">
+                    <div class="product-image-container">
+                        <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=300&h=200&fit=crop&crop=center"
+                            alt="ライトダウンジャケット" class="product-image">
+                        <div class="product-overlay">
+                            <button class="btn btn-primary quick-view-btn">クイックビュー</button>
+                        </div>
+                        <div class="product-badge premium">PREMIUM</div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-name">ライトダウンジャケット</div>
+                        <div class="product-price">
+                            <span class="current-price">¥15,800</span>
+                        </div>
+                        <div class="product-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="review-count">(28件)</span>
+                        </div>
+                        <div class="product-colors">
+                            <span class="color-option" style="background-color: #000000;" title="ブラック"></span>
+                            <span class="color-option" style="background-color: #8B4513;" title="ブラウン"></span>
+                        </div>
+                    </div>
                     <div class="button-group">
                         <a href="product_down_jacket.html" class="btn btn-secondary">詳細を見る</a>
                         <button class="btn add-to-cart-btn">カートに入れる</button>
                     </div>
                 </div>
-                <div class="product-card" data-product-id="denim-jacket">
-                    <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=300&h=200&fit=crop&crop=center"
-                        alt="デニムジャケット" class="product-image">
-                    <div class="product-name">デニムジャケット</div>
-                    <div class="product-price">9,800円</div>
+
+                <div class="product-card" data-product-id="denim-jacket" data-price="9800" data-category="jacket">
+                    <div class="product-image-container">
+                        <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=300&h=200&fit=crop&crop=center"
+                            alt="デニムジャケット" class="product-image">
+                        <div class="product-overlay">
+                            <button class="btn btn-primary quick-view-btn">クイックビュー</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-name">デニムジャケット</div>
+                        <div class="product-price">
+                            <span class="current-price">¥9,800</span>
+                        </div>
+                        <div class="product-rating">
+                            <span class="stars">★★★★☆</span>
+                            <span class="review-count">(19件)</span>
+                        </div>
+                        <div class="product-colors">
+                            <span class="color-option" style="background-color: #4169E1;" title="ネイビー"></span>
+                            <span class="color-option" style="background-color: #228B22;" title="グリーン"></span>
+                        </div>
+                    </div>
                     <div class="button-group">
                         <a href="product_denim_jacket.html" class="btn btn-secondary">詳細を見る</a>
                         <button class="btn add-to-cart-btn">カートに入れる</button>
                     </div>
                 </div>
-                <div class="product-card" data-product-id="wool-blazer">
-                    <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=300&h=200&fit=crop&crop=center"
-                        alt="ウールブレザー" class="product-image">
-                    <div class="product-name">ウールブレザー</div>
-                    <div class="product-price">18,500円</div>
+
+                <div class="product-card" data-product-id="wool-blazer" data-price="18500" data-category="blazer">
+                    <div class="product-image-container">
+                        <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=300&h=200&fit=crop&crop=center"
+                            alt="ウールブレザー" class="product-image">
+                        <div class="product-overlay">
+                            <button class="btn btn-primary quick-view-btn">クイックビュー</button>
+                        </div>
+                        <div class="product-badge premium">PREMIUM</div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-name">ウールブレザー</div>
+                        <div class="product-price">
+                            <span class="current-price">¥18,500</span>
+                        </div>
+                        <div class="product-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="review-count">(31件)</span>
+                        </div>
+                        <div class="product-colors">
+                            <span class="color-option" style="background-color: #000000;" title="ブラック"></span>
+                            <span class="color-option" style="background-color: #8B4513;" title="ブラウン"></span>
+                            <span class="color-option" style="background-color: #808080;" title="グレー"></span>
+                        </div>
+                    </div>
                     <div class="button-group">
                         <a href="product_wool_blazer.html" class="btn btn-secondary">詳細を見る</a>
                         <button class="btn add-to-cart-btn">カートに入れる</button>
                     </div>
                 </div>
-                <div class="product-card" data-product-id="trench-coat">
-                    <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=300&h=200&fit=crop&crop=center"
-                        alt="トレンチコート" class="product-image">
-                    <div class="product-name">トレンチコート</div>
-                    <div class="product-price">22,800円</div>
+
+                <div class="product-card" data-product-id="trench-coat" data-price="22800" data-category="coat">
+                    <div class="product-image-container">
+                        <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=300&h=200&fit=crop&crop=center"
+                            alt="トレンチコート" class="product-image">
+                        <div class="product-overlay">
+                            <button class="btn btn-primary quick-view-btn">クイックビュー</button>
+                        </div>
+                        <div class="product-badge premium">PREMIUM</div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-name">トレンチコート</div>
+                        <div class="product-price">
+                            <span class="current-price">¥22,800</span>
+                        </div>
+                        <div class="product-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="review-count">(26件)</span>
+                        </div>
+                        <div class="product-colors">
+                            <span class="color-option" style="background-color: #F5DEB3;" title="ベージュ"></span>
+                            <span class="color-option" style="background-color: #000000;" title="ブラック"></span>
+                        </div>
+                    </div>
                     <div class="button-group">
                         <a href="product_trench_coat.html" class="btn btn-secondary">詳細を見る</a>
                         <button class="btn add-to-cart-btn">カートに入れる</button>
                     </div>
                 </div>
+            </div>
+
+            <!-- ページネーション -->
+            <div class="pagination">
+                <a href="#" class="page-link active">1</a>
+                <a href="#" class="page-link">2</a>
+                <a href="#" class="page-link">3</a>
+                <a href="#" class="page-link next">次へ ></a>
             </div>
         </div>
     </main>
@@ -108,17 +263,51 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-links">
-                    <a href="#">会社概要</a>
-                    <a href="#">プライバシーポリシー</a>
-                    <a href="#">お問い合わせ</a>
+                <div class="footer-section">
+                    <h3>UrbanWear Japan</h3>
+                    <p>都会で働くあなたに寄り添う、シンプルで機能的なアパレルブランド</p>
                 </div>
-                <div class="copyright">© 2025 UrbanWear Japan</div>
+                <div class="footer-section">
+                    <h4>ショッピング</h4>
+                    <ul>
+                        <li><a href="tops.html">トップス</a></li>
+                        <li><a href="outer.html">アウター</a></li>
+                        <li><a href="campaign.html">セール</a></li>
+                        <li><a href="cart.html">カート</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>サポート</h4>
+                    <ul>
+                        <li><a href="#">お問い合わせ</a></li>
+                        <li><a href="#">サイズガイド</a></li>
+                        <li><a href="#">配送について</a></li>
+                        <li><a href="#">返品・交換</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>会社情報</h4>
+                    <ul>
+                        <li><a href="#">会社概要</a></li>
+                        <li><a href="#">プライバシーポリシー</a></li>
+                        <li><a href="#">利用規約</a></li>
+                        <li><a href="#">採用情報</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="copyright">© 2025 UrbanWear Japan. All rights reserved.</div>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram">📷</a>
+                    <a href="#" aria-label="Twitter">🐦</a>
+                    <a href="#" aria-label="Facebook">📘</a>
+                </div>
             </div>
         </div>
     </footer>
 
     <script src="cart.js"></script>
+    <script src="products.js"></script>
 </body>
 
 </html>

@@ -13,9 +13,12 @@
     <header>
         <div class="container">
             <div class="header-content">
-                <div class="logo">UrbanWear Japan</div>
+                <div class="logo">
+                    <a href="index.html">UrbanWear Japan</a>
+                </div>
                 <nav>
                     <ul>
+                        <li><a href="index.html">ホーム</a></li>
                         <li><a href="tops.html">トップス</a></li>
                         <li><a href="outer.html">アウター</a></li>
                         <li><a href="campaign.html">セール</a></li>
@@ -23,10 +26,14 @@
                         <li><a href="register.html">会員登録</a></li>
                     </ul>
                 </nav>
-                <div class="cart-icon" id="cart-icon">
-                    🛒
-                    <span class="cart-count" id="cart-count">0</span>
-                    <span class="cart-total" id="cart-total">¥0</span>
+                <div class="header-actions">
+                    <a href="cart.html" class="cart-link">
+                        <div class="cart-icon" id="cart-icon">
+                            🛒
+                            <span class="cart-count" id="cart-count">0</span>
+                            <span class="cart-total" id="cart-total">¥0</span>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -39,41 +46,109 @@
             <section class="hero">
                 <h1>Minimalist Styles for Urban Life</h1>
                 <p>都会で働くあなたに寄り添う、シンプルで機能的なアパレルブランド</p>
+                <div class="hero-actions">
+                    <a href="tops.html" class="btn btn-primary">商品を見る</a>
+                    <a href="campaign.html" class="btn btn-secondary">セール情報</a>
+                </div>
             </section>
 
             <!-- Featured Products -->
-            <section>
+            <section class="featured-products">
                 <h2>Featured Products</h2>
                 <div class="products-grid">
                     <div class="product-card" data-product-id="urbanwear-parka">
-                        <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=300&h=200&fit=crop&crop=center"
-                            alt="高機能マウンテンパーカー" class="product-image">
-                        <div class="product-name">高機能マウンテンパーカー</div>
-                        <div class="product-price">12,800円</div>
+                        <div class="product-image-container">
+                            <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=300&h=200&fit=crop&crop=center"
+                                alt="高機能マウンテンパーカー" class="product-image">
+                            <div class="product-overlay">
+                                <button class="btn btn-primary quick-view-btn">クイックビュー</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">高機能マウンテンパーカー</div>
+                            <div class="product-price">¥12,800</div>
+                            <div class="product-rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="review-count">(24件)</span>
+                            </div>
+                        </div>
                         <div class="button-group">
                             <a href="product_urbanwear.html" class="btn btn-secondary">詳細を見る</a>
                             <button class="btn add-to-cart-btn">カートに入れる</button>
                         </div>
                     </div>
                     <div class="product-card" data-product-id="city-shell-jacket">
-                        <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=300&h=200&fit=crop&crop=center"
-                            alt="シティ・シェルジャケット" class="product-image">
-                        <div class="product-name">シティ・シェルジャケット</div>
-                        <div class="product-price">11,500円</div>
+                        <div class="product-image-container">
+                            <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=300&h=200&fit=crop&crop=center"
+                                alt="シティ・シェルジャケット" class="product-image">
+                            <div class="product-overlay">
+                                <button class="btn btn-primary quick-view-btn">クイックビュー</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">シティ・シェルジャケット</div>
+                            <div class="product-price">¥11,500</div>
+                            <div class="product-rating">
+                                <span class="stars">★★★★☆</span>
+                                <span class="review-count">(18件)</span>
+                            </div>
+                        </div>
                         <div class="button-group">
                             <a href="product_tokyo.html" class="btn btn-secondary">詳細を見る</a>
                             <button class="btn add-to-cart-btn">カートに入れる</button>
                         </div>
                     </div>
                     <div class="product-card" data-product-id="premium-knit-sweater">
-                        <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=300&h=200&fit=crop&crop=center"
-                            alt="プレミアムニットセーター" class="product-image">
-                        <div class="product-name">プレミアムニットセーター</div>
-                        <div class="product-price">8,900円</div>
+                        <div class="product-image-container">
+                            <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=300&h=200&fit=crop&crop=center"
+                                alt="プレミアムニットセーター" class="product-image">
+                            <div class="product-overlay">
+                                <button class="btn btn-primary quick-view-btn">クイックビュー</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">プレミアムニットセーター</div>
+                            <div class="product-price">¥8,900</div>
+                            <div class="product-rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="review-count">(31件)</span>
+                            </div>
+                        </div>
                         <div class="button-group">
                             <a href="#" class="btn btn-secondary">詳細を見る</a>
                             <button class="btn add-to-cart-btn">カートに入れる</button>
                         </div>
+                    </div>
+                </div>
+                <div class="view-all-products">
+                    <a href="tops.html" class="btn btn-outline">すべての商品を見る</a>
+                </div>
+            </section>
+
+            <!-- カテゴリーセクション -->
+            <section class="categories">
+                <h2>カテゴリー</h2>
+                <div class="categories-grid">
+                    <div class="category-card">
+                        <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=300&h=200&fit=crop&crop=center"
+                            alt="トップス">
+                        <h3>トップス</h3>
+                        <p>日常使いから特別な日まで</p>
+                        <a href="tops.html" class="btn btn-secondary">見る</a>
+                    </div>
+                    <div class="category-card">
+                        <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=300&h=200&fit=crop&crop=center"
+                            alt="アウター">
+                        <h3>アウター</h3>
+                        <p>機能性とスタイルを両立</p>
+                        <a href="outer.html" class="btn btn-secondary">見る</a>
+                    </div>
+                    <div class="category-card">
+                        <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=300&h=200&fit=crop&crop=center"
+                            alt="セール">
+                        <h3>セール</h3>
+                        <p>お得な価格でお気に入りを</p>
+                        <a href="campaign.html" class="btn btn-secondary">見る</a>
                     </div>
                 </div>
             </section>
@@ -84,12 +159,45 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-links">
-                    <a href="#">会社概要</a>
-                    <a href="#">プライバシーポリシー</a>
-                    <a href="#">お問い合わせ</a>
+                <div class="footer-section">
+                    <h3>UrbanWear Japan</h3>
+                    <p>都会で働くあなたに寄り添う、シンプルで機能的なアパレルブランド</p>
                 </div>
-                <div class="copyright">© 2025 UrbanWear Japan</div>
+                <div class="footer-section">
+                    <h4>ショッピング</h4>
+                    <ul>
+                        <li><a href="tops.html">トップス</a></li>
+                        <li><a href="outer.html">アウター</a></li>
+                        <li><a href="campaign.html">セール</a></li>
+                        <li><a href="cart.html">カート</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>サポート</h4>
+                    <ul>
+                        <li><a href="#">お問い合わせ</a></li>
+                        <li><a href="#">サイズガイド</a></li>
+                        <li><a href="#">配送について</a></li>
+                        <li><a href="#">返品・交換</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>会社情報</h4>
+                    <ul>
+                        <li><a href="#">会社概要</a></li>
+                        <li><a href="#">プライバシーポリシー</a></li>
+                        <li><a href="#">利用規約</a></li>
+                        <li><a href="#">採用情報</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="copyright">© 2025 UrbanWear Japan. All rights reserved.</div>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram">📷</a>
+                    <a href="#" aria-label="Twitter">🐦</a>
+                    <a href="#" aria-label="Facebook">📘</a>
+                </div>
             </div>
         </div>
     </footer>

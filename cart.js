@@ -19,7 +19,7 @@ class Cart {
     // アイテムをカートに追加
     addItem(product) {
         const existingItem = this.items.find(item => item.id === product.id);
-        
+
         if (existingItem) {
             existingItem.quantity += 1;
         } else {
@@ -28,7 +28,7 @@ class Cart {
                 quantity: 1
             });
         }
-        
+
         this.saveCart();
         this.updateCartDisplay();
         this.showAddToCartMessage(product.name);
@@ -82,13 +82,13 @@ class Cart {
         const cartIcon = document.getElementById('cart-icon');
         const cartCount = document.getElementById('cart-count');
         const cartTotal = document.getElementById('cart-total');
-        
+
         if (cartIcon && cartCount) {
             const itemCount = this.getItemCount();
             cartCount.textContent = itemCount;
             cartCount.style.display = itemCount > 0 ? 'block' : 'none';
         }
-        
+
         if (cartTotal) {
             const total = this.getTotal();
             cartTotal.textContent = `¥${total.toLocaleString()}`;
@@ -99,7 +99,7 @@ class Cart {
     updateCartPage() {
         const cartItemsContainer = document.getElementById('cart-items');
         const cartTotalElement = document.getElementById('cart-total-amount');
-        
+
         if (cartItemsContainer) {
             if (this.items.length === 0) {
                 cartItemsContainer.innerHTML = '<p class="empty-cart">カートにアイテムがありません</p>';
@@ -123,7 +123,7 @@ class Cart {
                 `).join('');
             }
         }
-        
+
         if (cartTotalElement) {
             const total = this.getTotal();
             cartTotalElement.textContent = `¥${total.toLocaleString()}`;
@@ -135,9 +135,9 @@ class Cart {
         const message = document.createElement('div');
         message.className = 'add-to-cart-message';
         message.textContent = `${productName} をカートに追加しました`;
-        
+
         document.body.appendChild(message);
-        
+
         setTimeout(() => {
             message.remove();
         }, 3000);
@@ -148,9 +148,9 @@ class Cart {
 const cart = new Cart();
 
 // ページ読み込み時にカートの表示を更新
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     cart.updateCartDisplay();
-    
+
     // カートページの場合、カートページの表示も更新
     if (window.location.pathname.includes('cart.html')) {
         cart.updateCartPage();
@@ -158,10 +158,10 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // カートに追加ボタンのイベントリスナーを設定
-document.addEventListener('click', function(e) {
+document.addEventListener('click', function (e) {
     if (e.target.classList.contains('add-to-cart-btn')) {
         let product;
-        
+
         // 商品詳細ページの場合
         if (e.target.dataset.productId) {
             product = {
@@ -170,21 +170,34 @@ document.addEventListener('click', function(e) {
                 price: parseInt(e.target.dataset.productPrice),
                 image: e.target.dataset.productImage
             };
+            
+            // デバッグ用ログ
+            console.log('商品詳細ページからカート追加:', product);
         } else {
             // 商品一覧ページの場合
             const productCard = e.target.closest('.product-card');
             if (productCard) {
+                const priceElement = productCard.querySelector('.current-price');
+                const priceText = priceElement ? priceElement.textContent : '';
+                const price = parseInt(priceText.replace(/[^\d]/g, ''));
+                
                 product = {
                     id: productCard.dataset.productId || Date.now().toString(),
                     name: productCard.querySelector('.product-name').textContent,
-                    price: parseInt(productCard.querySelector('.product-price').textContent.replace(/[^\d]/g, '')),
+                    price: price,
                     image: productCard.querySelector('.product-image').src
                 };
+                
+                // デバッグ用ログ
+                console.log('商品一覧ページからカート追加:', product);
             }
         }
-        
+
         if (product) {
+            console.log('カートに追加する商品:', product);
             cart.addItem(product);
+        } else {
+            console.error('商品情報の取得に失敗しました');
         }
     }
 });
