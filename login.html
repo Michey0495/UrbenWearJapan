@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ログイン - UrbanWear Japan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- ヘッダー -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">UrbanWear Japan</div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">ホーム</a></li>
+                        <li><a href="tops.html">トップス</a></li>
+                        <li><a href="outer.html">アウター</a></li>
+                        <li><a href="campaign.html">セール</a></li>
+                        <li><a href="register.html">会員登録</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- メインコンテンツ -->
+    <main class="main-content">
+        <div class="container">
+            <div class="login-form-container">
+                <h1>ログイン</h1>
+                
+                <!-- バグ1: フォームのaction属性が間違っている -->
+                <form class="login-form" action="javascript:void(0)" method="POST">
+                    <div class="form-group">
+                        <label for="email">メールアドレス</label>
+                        <!-- バグ2: 必須属性が抜けている -->
+                        <input type="email" id="email" name="email" placeholder="example@email.com">
+                        <!-- バグ3: エラーメッセージが常に表示されている -->
+                        <span class="error-message" style="display: block;">メールアドレスを入力してください</span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">パスワード</label>
+                        <!-- バグ4: パスワードの最小長が短すぎる -->
+                        <input type="password" id="password" name="password" minlength="3" placeholder="パスワードを入力">
+                        <!-- バグ5: パスワード強度チェックが不完全 -->
+                        <div class="password-strength">
+                            <span class="strength-weak">弱</span>
+                            <span class="strength-medium">中</span>
+                            <span class="strength-strong">強</span>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <!-- バグ6: チェックボックスのname属性が間違っている -->
+                        <label>
+                            <input type="checkbox" name="remember_me" value="1"> ログイン状態を保持
+                        </label>
+                    </div>
+                    
+                    <!-- バグ7: ボタンのtype属性が抜けている -->
+                    <button class="btn btn-login">ログイン</button>
+                </form>
+                
+                <div class="login-links">
+                    <a href="forgot-password.html">パスワードを忘れた方</a>
+                    <a href="register.html">新規会員登録</a>
+                </div>
+                
+                <!-- バグ8: テスト用のログイン情報が表示されている -->
+                <div class="test-credentials" style="background: #f0f0f0; padding: 15px; margin-top: 20px; border-radius: 5px;">
+                    <h3>テスト用ログイン情報</h3>
+                    <p><strong>メール:</strong> test@example.com</p>
+                    <p><strong>パスワード:</strong> password123</p>
+                    <p><small>※ これはテスト用の情報です。実際のサイトでは表示しません。</small></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- フッター -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="#">会社概要</a>
+                    <a href="#">プライバシーポリシー</a>
+                    <a href="#">お問い合わせ</a>
+                </div>
+                <div class="copyright">© 2025 UrbanWear Japan</div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // バグ9: JavaScriptエラーが発生する可能性があるコード
+        document.addEventListener('DOMContentLoaded', function() {
+            const loginForm = document.querySelector('.login-form');
+            const emailInput = document.getElementById('email');
+            const passwordInput = document.getElementById('password');
+            
+            // バグ10: イベントリスナーが重複して追加される可能性
+            loginForm.addEventListener('submit', handleLogin);
+            loginForm.addEventListener('submit', handleLogin); // 重複
+            
+            function handleLogin(e) {
+                e.preventDefault();
+                
+                // バグ11: バリデーションが不完全
+                if (!emailInput.value) {
+                    alert('メールアドレスを入力してください');
+                    return;
+                }
+                
+                // バグ12: パスワードの検証が弱い
+                if (passwordInput.value.length < 3) {
+                    alert('パスワードは3文字以上で入力してください');
+                    return;
+                }
+                
+                // バグ13: ログイン処理が不完全（実際のAPI呼び出しがない）
+                console.log('ログイン処理開始');
+                
+                // バグ14: セキュリティ上の問題（パスワードをコンソールに出力）
+                console.log('入力されたパスワード:', passwordInput.value);
+                
+                // バグ15: ログイン成功後の処理が不完全
+                alert('ログインに成功しました！');
+                // window.location.href = 'index.html'; // リダイレクトがコメントアウトされている
+            }
+            
+            // バグ16: パスワード強度チェックが実装されていない
+            passwordInput.addEventListener('input', function() {
+                const password = this.value;
+                const strengthElements = document.querySelectorAll('.password-strength span');
+                
+                // 強度チェックのロジックが不完全
+                if (password.length < 3) {
+                    strengthElements[0].style.color = 'red';
+                } else if (password.length < 6) {
+                    strengthElements[1].style.color = 'orange';
+                } else {
+                    strengthElements[2].style.color = 'green';
+                }
+            });
+        });
+        
+        // バグ17: グローバルスコープに変数が漏洩している
+        var globalTestVar = 'これはテスト用の変数です';
+        
+        // バグ18: 未定義の関数を呼び出そうとしている
+        function testFunction() {
+            // この関数は定義されていない
+            undefinedFunction();
+        }
+    </script>
+</body>
+
+</html>
