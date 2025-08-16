@@ -32,7 +32,7 @@
         <div class="container">
             <div class="login-form-container">
                 <h1>ログイン</h1>
-                
+
                 <!-- バグ1: フォームのaction属性が間違っている -->
                 <form class="login-form" action="javascript:void(0)" method="POST">
                     <div class="form-group">
@@ -42,7 +42,7 @@
                         <!-- バグ3: エラーメッセージが常に表示されている -->
                         <span class="error-message" style="display: block;">メールアドレスを入力してください</span>
                     </div>
-                    
+
                     <div class="form-group">
                         <label for="password">パスワード</label>
                         <!-- バグ4: パスワードの最小長が短すぎる -->
@@ -54,25 +54,26 @@
                             <span class="strength-strong">強</span>
                         </div>
                     </div>
-                    
+
                     <div class="form-group">
                         <!-- バグ6: チェックボックスのname属性が間違っている -->
                         <label>
                             <input type="checkbox" name="remember_me" value="1"> ログイン状態を保持
                         </label>
                     </div>
-                    
+
                     <!-- バグ7: ボタンのtype属性が抜けている -->
                     <button class="btn btn-login">ログイン</button>
                 </form>
-                
+
                 <div class="login-links">
                     <a href="forgot-password.html">パスワードを忘れた方</a>
                     <a href="register.html">新規会員登録</a>
                 </div>
-                
+
                 <!-- バグ8: テスト用のログイン情報が表示されている -->
-                <div class="test-credentials" style="background: #f0f0f0; padding: 15px; margin-top: 20px; border-radius: 5px;">
+                <div class="test-credentials"
+                    style="background: #f0f0f0; padding: 15px; margin-top: 20px; border-radius: 5px;">
                     <h3>テスト用ログイン情報</h3>
                     <p><strong>メール:</strong> test@example.com</p>
                     <p><strong>パスワード:</strong> password123</p>
@@ -98,46 +99,46 @@
 
     <script>
         // バグ9: JavaScriptエラーが発生する可能性があるコード
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const loginForm = document.querySelector('.login-form');
             const emailInput = document.getElementById('email');
             const passwordInput = document.getElementById('password');
-            
+
             // バグ10: イベントリスナーが重複して追加される可能性
             loginForm.addEventListener('submit', handleLogin);
             loginForm.addEventListener('submit', handleLogin); // 重複
-            
+
             function handleLogin(e) {
                 e.preventDefault();
-                
+
                 // バグ11: バリデーションが不完全
                 if (!emailInput.value) {
                     alert('メールアドレスを入力してください');
                     return;
                 }
-                
+
                 // バグ12: パスワードの検証が弱い
                 if (passwordInput.value.length < 3) {
                     alert('パスワードは3文字以上で入力してください');
                     return;
                 }
-                
+
                 // バグ13: ログイン処理が不完全（実際のAPI呼び出しがない）
                 console.log('ログイン処理開始');
-                
+
                 // バグ14: セキュリティ上の問題（パスワードをコンソールに出力）
                 console.log('入力されたパスワード:', passwordInput.value);
-                
+
                 // バグ15: ログイン成功後の処理が不完全
                 alert('ログインに成功しました！');
                 // window.location.href = 'index.html'; // リダイレクトがコメントアウトされている
             }
-            
+
             // バグ16: パスワード強度チェックが実装されていない
-            passwordInput.addEventListener('input', function() {
+            passwordInput.addEventListener('input', function () {
                 const password = this.value;
                 const strengthElements = document.querySelectorAll('.password-strength span');
-                
+
                 // 強度チェックのロジックが不完全
                 if (password.length < 3) {
                     strengthElements[0].style.color = 'red';
@@ -148,10 +149,10 @@
                 }
             });
         });
-        
+
         // バグ17: グローバルスコープに変数が漏洩している
         var globalTestVar = 'これはテスト用の変数です';
-        
+
         // バグ18: 未定義の関数を呼び出そうとしている
         function testFunction() {
             // この関数は定義されていない
