@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Autumn Style Collection - UrbanWear Japan</title>
+    <title>セール・キャンペーン - UrbanWear Japan</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -13,21 +13,28 @@
     <header>
         <div class="container">
             <div class="header-content">
-                <div class="logo">UrbanWear Japan</div>
+                <div class="logo">
+                    <a href="index.html">UrbanWear Japan</a>
+                </div>
                 <nav>
                     <ul>
                         <li><a href="index.html">ホーム</a></li>
                         <li><a href="tops.html">トップス</a></li>
                         <li><a href="outer.html">アウター</a></li>
+                        <li><a href="bottoms.html">ボトムズ</a></li>
                         <li><a href="campaign.html">セール</a></li>
                         <li><a href="login.html">ログイン</a></li>
                         <li><a href="register.html">会員登録</a></li>
                     </ul>
                 </nav>
-                <div class="cart-icon" id="cart-icon">
-                    🛒
-                    <span class="cart-count" id="cart-count">0</span>
-                    <span class="cart-total" id="cart-total">¥0</span>
+                <div class="header-actions">
+                    <a href="cart.html" class="cart-link">
+                        <div class="cart-icon" id="cart-icon">
+                            🛒
+                            <span class="cart-count" id="cart-count">0</span>
+                            <span class="cart-total" id="cart-total">¥0</span>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -36,35 +43,409 @@
     <!-- メインコンテンツ -->
     <main class="main-content">
         <div class="container">
-            <!-- キャンペーンヒーロー -->
+            <!-- ヒーローセクション -->
             <section class="campaign-hero">
-                <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&h=400&fit=crop&crop=center"
-                    alt="Autumn Style Collection" class="campaign-image">
-                <h1>Autumn Style Collection</h1>
-                <p>秋の新作コレクションが15%OFF！</p>
+                <div class="hero-content">
+                    <h1 class="hero-title">🎉 セール・キャンペーン情報 🎉</h1>
+                    <p class="hero-subtitle">お得な情報をお見逃しなく！限定特典や特別価格でお気に入りの商品をお手に</p>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">最大</span>
+                            <span class="stat-value">70%OFF</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">期間限定</span>
+                            <span class="stat-value">2週間</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">対象商品</span>
+                            <span class="stat-value">500点以上</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="floating-elements">
+                        <span class="floating-tag">SALE</span>
+                        <span class="floating-tag">NEW</span>
+                        <span class="floating-tag">HOT</span>
+                    </div>
+                </div>
             </section>
 
-            <!-- キャンペーン詳細 -->
-            <section class="campaign-details">
-                <h2>キャンペーン詳細</h2>
-                <ul>
-                    <li>
-                        <span>期間</span>
-                        <strong>2025/9/1 - 2025/9/30</strong>
-                    </li>
-                    <li>
-                        <span>内容</span>
-                        <strong>対象のジャケット、ニットが15%OFF</strong>
-                    </li>
-                    <li>
-                        <span>クーポンコード</span>
-                        <strong>AUTUMN25</strong>
-                    </li>
-                    <li>
-                        <span>注意点</span>
-                        <strong>予約商品は対象外。他のクーポンとの併用は不可</strong>
-                    </li>
-                </ul>
+            <!-- メインキャンペーン -->
+            <section class="main-campaign">
+                <div class="campaign-header">
+                    <h2>🔥 メインキャンペーン</h2>
+                    <p>今月最も注目のキャンペーンをご紹介します</p>
+                </div>
+
+                <!-- 春の新作セール -->
+                <div class="campaign-card featured">
+                    <div class="campaign-image">
+                        <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=400&h=300&fit=crop&crop=center"
+                            alt="春の新作セール">
+                        <div class="campaign-badge main">メイン</div>
+                        <div class="campaign-overlay">
+                            <div class="countdown-timer">
+                                <span class="countdown-label">終了まで</span>
+                                <div class="countdown-numbers">
+                                    <span class="countdown-item">
+                                        <span class="number">14</span>
+                                        <span class="unit">日</span>
+                                    </span>
+                                    <span class="countdown-item">
+                                        <span class="number">08</span>
+                                        <span class="unit">時間</span>
+                                    </span>
+                                    <span class="countdown-item">
+                                        <span class="number">32</span>
+                                        <span class="unit">分</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="campaign-content">
+                        <div class="campaign-tags">
+                            <span class="tag new">NEW</span>
+                            <span class="tag hot">HOT</span>
+                            <span class="tag limited">限定</span>
+                        </div>
+                        <h3 class="campaign-title">春の新作セール 最大70%OFF</h3>
+                        <div class="campaign-period">
+                            <span class="period-icon">📅</span>
+                            <span>2025年3月1日〜3月15日</span>
+                        </div>
+                        <div class="campaign-description">
+                            <p>春の新作商品が続々登場！新作アイテムが最大70%OFFでお買い得です。春らしいパステルカラーや軽やかな素材を使用した商品を、特別価格でお楽しみください。</p>
+                            <p>対象商品は、トップス、アウター、ボトムズの全カテゴリから厳選された春の新作アイテムです。数量限定のため、お早めにお買い求めください。</p>
+                        </div>
+                        <div class="campaign-details">
+                            <div class="detail-item">
+                                <span class="detail-icon">🎯</span>
+                                <div class="detail-content">
+                                    <h4>対象商品</h4>
+                                    <p>春の新作コレクション全商品（約200点）</p>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-icon">💰</span>
+                                <div class="detail-content">
+                                    <h4>割引率</h4>
+                                    <p>最大70%OFF（商品により異なります）</p>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-icon">🎁</span>
+                                <div class="detail-content">
+                                    <h4>特典</h4>
+                                    <p>春の新作購入で、限定トートバッグをプレゼント</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="campaign-actions">
+                            <a href="tops.html" class="btn btn-primary">商品を見る</a>
+                            <button class="btn btn-outline">詳細を見る</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- アウター大特価セール -->
+                <div class="campaign-card">
+                    <div class="campaign-image">
+                        <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=400&h=300&fit=crop&crop=center"
+                            alt="アウター大特価セール">
+                        <div class="campaign-badge sale">SALE</div>
+                    </div>
+                    <div class="campaign-content">
+                        <div class="campaign-tags">
+                            <span class="tag sale">SALE</span>
+                            <span class="tag popular">人気</span>
+                        </div>
+                        <h3 class="campaign-title">アウター大特価セール 最大60%OFF</h3>
+                        <div class="campaign-period">
+                            <span class="period-icon">📅</span>
+                            <span>2025年3月1日〜3月31日</span>
+                        </div>
+                        <div class="campaign-description">
+                            <p>冬のアウターが大特価で登場！高機能マウンテンパーカー、トレンチコート、ダウンジャケットなど、機能性とスタイルを両立したアウターが最大60%OFFでお買い得です。</p>
+                            <p>防水・防風機能を備えたアウトドア向けの商品から、ビジネスシーンで活躍するエレガントなアウターまで、幅広いラインナップをご用意しています。春の到来前に、お気に入りのアウターを見つけてください。</p>
+                        </div>
+                        <div class="campaign-details">
+                            <div class="detail-item">
+                                <span class="detail-icon">🎯</span>
+                                <div class="detail-content">
+                                    <h4>対象商品</h4>
+                                    <p>アウターカテゴリ全商品（約150点）</p>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-icon">💰</span>
+                                <div class="detail-content">
+                                    <h4>割引率</h4>
+                                    <p>最大60%OFF（商品により異なります）</p>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-icon">🚚</span>
+                                <div class="detail-content">
+                                    <h4>配送特典</h4>
+                                    <p>アウター購入で送料無料</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="campaign-actions">
+                            <a href="outer.html" class="btn btn-primary">商品を見る</a>
+                            <button class="btn btn-outline">詳細を見る</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 新規会員限定キャンペーン -->
+                <div class="campaign-card">
+                    <div class="campaign-image">
+                        <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=400&h=300&fit=crop&crop=center"
+                            alt="新規会員限定キャンペーン">
+                        <div class="campaign-badge member">会員限定</div>
+                    </div>
+                    <div class="campaign-content">
+                        <div class="campaign-tags">
+                            <span class="tag member">会員限定</span>
+                            <span class="tag welcome">新規</span>
+                        </div>
+                        <h3 class="campaign-title">新規会員限定 初回購入20%OFF</h3>
+                        <div class="campaign-period">
+                            <span class="period-icon">📅</span>
+                            <span>2025年3月1日〜6月30日</span>
+                        </div>
+                        <div class="campaign-description">
+                            <p>UrbanWear Japanに新規会員登録された方限定の特別キャンペーンです！初回購入時に全商品20%OFFでお買い得です。会員登録は無料で、登録後すぐにご利用いただけます。</p>
+                            <p>さらに、新規会員様には特別なウェルカムギフトもご用意しています。お気に入りの商品を特別価格でお買い求めいただき、UrbanWear Japanの世界をお楽しみください。</p>
+                        </div>
+                        <div class="campaign-details">
+                            <div class="detail-item">
+                                <span class="detail-icon">🎯</span>
+                                <div class="detail-content">
+                                    <h4>対象者</h4>
+                                    <p>新規会員登録者（初回購入時のみ）</p>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-icon">💰</span>
+                                <div class="detail-content">
+                                    <h4>割引率</h4>
+                                    <p>全商品20%OFF</p>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-icon">🎁</span>
+                                <div class="detail-content">
+                                    <h4>特典</h4>
+                                    <p>新規会員限定ウェルカムギフト</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="campaign-actions">
+                            <a href="register.html" class="btn btn-primary">会員登録</a>
+                            <button class="btn btn-outline">詳細を見る</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ボトムズ春コレクション -->
+                <div class="campaign-card">
+                    <div class="campaign-image">
+                        <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?w=400&h=300&fit=crop&crop=center"
+                            alt="ボトムズ春コレクション">
+                        <div class="campaign-badge collection">コレクション</div>
+                    </div>
+                    <div class="campaign-content">
+                        <div class="campaign-tags">
+                            <span class="tag collection">コレクション</span>
+                            <span class="tag spring">春</span>
+                        </div>
+                        <h3 class="campaign-title">ボトムズ春コレクション 最大50%OFF</h3>
+                        <div class="campaign-period">
+                            <span class="period-icon">📅</span>
+                            <span>2025年3月1日〜4月15日</span>
+                        </div>
+                        <div class="campaign-description">
+                            <p>春らしいボトムズが大集合！スリムフィットジーンズ、チノパンツ、カーゴパンツなど、春のファッションに欠かせないボトムズが最大50%OFFでお買い得です。</p>
+                            <p>春の新作から定番商品まで、様々なスタイルのボトムズをご用意しています。カジュアルからビジネスまで、シーンに合わせてお選びいただけます。春の装いをボトムズから始めてみませんか？</p>
+                        </div>
+                        <div class="campaign-details">
+                            <div class="detail-item">
+                                <span class="detail-icon">🎯</span>
+                                <div class="detail-content">
+                                    <h4>対象商品</h4>
+                                    <p>ボトムズカテゴリ全商品（約120点）</p>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-icon">💰</span>
+                                <div class="detail-content">
+                                    <h4>割引率</h4>
+                                    <p>最大50%OFF（商品により異なります）</p>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-icon">🎨</span>
+                                <div class="detail-content">
+                                    <h4>特徴</h4>
+                                    <p>春らしいパステルカラー展開</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="campaign-actions">
+                            <a href="bottoms.html" class="btn btn-primary">商品を見る</a>
+                            <button class="btn btn-outline">詳細を見る</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- キャンペーン情報 -->
+            <section class="campaign-info">
+                <div class="info-header">
+                    <h2>📢 キャンペーン情報</h2>
+                    <p>最新のキャンペーン情報をお届けします</p>
+                </div>
+                
+                <div class="info-grid">
+                    <div class="info-card">
+                        <div class="info-icon">💳</div>
+                        <h3>クレジットカード決済特典</h3>
+                        <p>指定のクレジットカードでお支払いいただくと、追加で5%OFF！さらにポイントも2倍で貯まります。お得なショッピングをお楽しみください。</p>
+                        <ul class="info-list">
+                            <li>対象カード：VISA、Mastercard、JCB、American Express</li>
+                            <li>割引率：追加5%OFF</li>
+                            <li>ポイント：通常の2倍</li>
+                            <li>期間：2025年3月1日〜12月31日</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">🚚</div>
+                        <h3>配送特典キャンペーン</h3>
+                        <p>5,000円以上のご購入で送料無料！さらに、指定エリアへの配送は翌日配達も可能です。お急ぎの際も安心してお買い求めいただけます。</p>
+                        <ul class="info-list">
+                            <li>送料無料条件：5,000円以上の購入</li>
+                            <li>通常配送：2-3営業日</li>
+                            <li>翌日配達：指定エリア限定</li>
+                            <li>配送料：全国一律500円</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">🎁</div>
+                        <h3>誕生日特典</h3>
+                        <p>会員様の誕生月には特別な特典をご用意！誕生月限定の割引クーポンや、特別なギフトをお送りします。お誕生日をお祝いしましょう。</p>
+                        <ul class="info-list">
+                            <li>対象者：会員登録済みの方</li>
+                            <li>特典：誕生月限定割引クーポン</li>
+                            <li>割引率：15%OFF</li>
+                            <li>期間：誕生月の1ヶ月間</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">📱</div>
+                        <h3>アプリ限定特典</h3>
+                        <p>UrbanWear Japan公式アプリをご利用いただくと、特別な特典が受けられます。アプリ限定のクーポンや、先行販売情報をお届けします。</p>
+                        <ul class="info-list">
+                            <li>アプリ限定クーポン：月1回配布</li>
+                            <li>先行販売：新商品の先行予約</li>
+                            <li>ポイント：アプリ経由で10%増加</li>
+                            <li>通知：新着情報をリアルタイム配信</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- よくある質問 -->
+            <section class="faq-section">
+                <div class="faq-header">
+                    <h2>❓ よくある質問</h2>
+                    <p>キャンペーンに関するよくある質問にお答えします</p>
+                </div>
+                
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span class="faq-icon">Q</span>
+                            <h3>複数のキャンペーンを併用できますか？</h3>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <span class="faq-icon">A</span>
+                            <p>はい、複数のキャンペーンを併用していただけます。ただし、一部のキャンペーンには制限がございます。詳細は各キャンペーンのページをご確認ください。</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span class="faq-icon">Q</span>
+                            <h3>キャンペーンの期間は延長されることがありますか？</h3>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <span class="faq-icon">A</span>
+                            <p>人気の高いキャンペーンについては、期間延長の可能性がございます。延長の際は、サイト内やメールでお知らせいたします。</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span class="faq-icon">Q</span>
+                            <h3>キャンペーン商品の返品・交換は可能ですか？</h3>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <span class="faq-icon">A</span>
+                            <p>キャンペーン商品も通常商品と同様に、30日以内の返品・交換が可能です。ただし、セール商品の場合は、商品の状態によって返品をお受けできない場合がございます。</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span class="faq-icon">Q</span>
+                            <h3>キャンペーン情報はどこで確認できますか？</h3>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <span class="faq-icon">A</span>
+                            <p>キャンペーン情報は、このページの他に、トップページ、メールマガジン、公式SNSでも随時お知らせしています。最新情報をお見逃しなく！</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- お問い合わせ -->
+            <section class="contact-section">
+                <div class="contact-content">
+                    <h2>📞 お問い合わせ</h2>
+                    <p>キャンペーンに関するご質問やご不明な点がございましたら、お気軽にお問い合わせください。</p>
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <span class="contact-icon">📧</span>
+                            <h3>メール</h3>
+                            <p>24時間受付</p>
+                            <a href="mailto:campaign@urbanwear-japan.com" class="btn btn-outline">メールを送る</a>
+                        </div>
+                        <div class="contact-method">
+                            <span class="contact-icon">📱</span>
+                            <h3>チャット</h3>
+                            <p>平日 9:00-18:00</p>
+                            <button class="btn btn-outline">チャットを開始</button>
+                        </div>
+                        <div class="contact-method">
+                            <span class="contact-icon">📞</span>
+                            <h3>電話</h3>
+                            <p>平日 9:00-18:00</p>
+                            <a href="tel:03-1234-5678" class="btn btn-outline">電話をかける</a>
+                        </div>
+                    </div>
+                </div>
             </section>
         </div>
     </main>
@@ -73,17 +454,83 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-links">
-                    <a href="#">会社概要</a>
-                    <a href="#">プライバシーポリシー</a>
-                    <a href="#">お問い合わせ</a>
+                <div class="footer-section">
+                    <h3>UrbanWear Japan</h3>
+                    <p>都会で働くあなたに寄り添う、シンプルで機能的なアパレルブランド</p>
                 </div>
-                <div class="copyright">© 2025 UrbanWear Japan</div>
+                <div class="footer-section">
+                    <h4>ショッピング</h4>
+                    <ul>
+                        <li><a href="tops.html">トップス</a></li>
+                        <li><a href="outer.html">アウター</a></li>
+                        <li><a href="bottoms.html">ボトムズ</a></li>
+                        <li><a href="campaign.html">セール</a></li>
+                        <li><a href="cart.html">カート</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>サポート</h4>
+                    <ul>
+                        <li><a href="#">お問い合わせ</a></li>
+                        <li><a href="#">サイズガイド</a></li>
+                        <li><a href="#">配送について</a></li>
+                        <li><a href="#">返品・交換</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>会社情報</h4>
+                    <ul>
+                        <li><a href="#">会社概要</a></li>
+                        <li><a href="#">プライバシーポリシー</a></li>
+                        <li><a href="#">利用規約</a></li>
+                        <li><a href="#">採用情報</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="copyright">© 2025 UrbanWear Japan. All rights reserved.</div>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram">📷</a>
+                    <a href="#" aria-label="Twitter">🐦</a>
+                    <a href="#" aria-label="Facebook">📘</a>
+                </div>
             </div>
         </div>
     </footer>
 
     <script src="cart.js"></script>
+    <script>
+        // FAQの開閉機能
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                const answer = faqItem.querySelector('.faq-answer');
+                const toggle = question.querySelector('.faq-toggle');
+                
+                if (answer.style.display === 'block') {
+                    answer.style.display = 'none';
+                    toggle.textContent = '+';
+                } else {
+                    answer.style.display = 'block';
+                    toggle.textContent = '-';
+                }
+            });
+        });
+
+        // カウントダウンタイマーのアニメーション
+        function animateCountdown() {
+            const numbers = document.querySelectorAll('.countdown-numbers .number');
+            numbers.forEach(number => {
+                number.style.animation = 'bounce 1s ease-in-out';
+                setTimeout(() => {
+                    number.style.animation = '';
+                }, 1000);
+            });
+        }
+
+        // 5秒ごとにカウントダウンをアニメーション
+        setInterval(animateCountdown, 5000);
+    </script>
 </body>
 
 </html>
