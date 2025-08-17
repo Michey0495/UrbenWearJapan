@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ボトムズ - UrbanWear Japan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- ヘッダー -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">UrbanWear Japan</a>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">ホーム</a></li>
+                        <li><a href="tops.html">トップス</a></li>
+                        <li><a href="outer.html">アウター</a></li>
+                        <li><a href="bottoms.html">ボトムズ</a></li>
+                        <li><a href="campaign.html">セール</a></li>
+                        <li><a href="login.html">ログイン</a></li>
+                        <li><a href="register.html">会員登録</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <a href="cart.html" class="cart-link">
+                        <div class="cart-icon" id="cart-icon">
+                            🛒
+                            <span class="cart-count" id="cart-count">0</span>
+                            <span class="cart-total" id="cart-total">¥0</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- メインコンテンツ -->
+    <main class="main-content">
+        <div class="container">
+            <!-- ページヘッダー -->
+            <div class="page-header">
+                <h1>ボトムズ</h1>
+                <p>日常使いから特別な日まで、様々なシーンに合わせたボトムズを揃えています</p>
+            </div>
+
+            <!-- フィルター・ソートセクション -->
+            <div class="filters-section">
+                <div class="search-box">
+                    <input type="text" id="search-input" placeholder="商品を検索...">
+                    <button type="button" id="search-btn">🔍</button>
+                </div>
+                <div class="sort-options">
+                    <select id="sort-select">
+                        <option value="popular">人気順</option>
+                        <option value="price-low">価格が安い順</option>
+                        <option value="price-high">価格が高い順</option>
+                        <option value="new">新着順</option>
+                        <option value="rating">評価順</option>
+                    </select>
+                </div>
+                <div class="price-filter">
+                    <label for="price-range">価格範囲:</label>
+                    <input type="range" id="price-range" min="0" max="20000" value="20000">
+                    <span id="price-value">¥20,000</span>
+                </div>
+            </div>
+
+            <!-- 商品グリッド -->
+            <div class="products-grid">
+                <div class="product-card" data-product-id="slim-fit-jeans" data-price="8900"
+                    data-category="jeans">
+                    <div class="product-image-container">
+                        <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?w=300&h=200&fit=crop&crop=center"
+                            alt="スリムフィットジーンズ" class="product-image">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">クイックビュー</button>
+                        </div>
+                        <div class="product-badge sale">SALE</div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">スリムフィットジーンズ</h3>
+                        <div class="product-rating">
+                            <span class="stars">★★★★☆</span>
+                            <span class="rating-score">4.2</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">¥8,900</span>
+                            <span class="original-price">¥12,000</span>
+                        </div>
+                        <div class="product-colors">
+                            <span class="color-dot" style="background-color: #000000;" title="ブラック"></span>
+                            <span class="color-dot" style="background-color: #8B4513;" title="ブラウン"></span>
+                            <span class="color-dot" style="background-color: #4169E1;" title="ネイビー"></span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn btn-secondary">詳細を見る</button>
+                            <button class="btn btn-primary add-to-cart-btn">カートに入れる</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-product-id="chino-pants" data-price="6500"
+                    data-category="pants">
+                    <div class="product-image-container">
+                        <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=300&h=200&fit=crop&crop=center"
+                            alt="チノパンツ" class="product-image">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">クイックビュー</button>
+                        </div>
+                        <div class="product-badge new">NEW</div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">チノパンツ</h3>
+                        <div class="product-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-score">4.8</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">¥6,500</span>
+                        </div>
+                        <div class="product-colors">
+                            <span class="color-dot" style="background-color: #F5DEB3;" title="ベージュ"></span>
+                            <span class="color-dot" style="background-color: #4169E1;" title="ネイビー"></span>
+                            <span class="color-dot" style="background-color: #000000;" title="ブラック"></span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn btn-secondary">詳細を見る</button>
+                            <button class="btn btn-primary add-to-cart-btn">カートに入れる</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-product-id="cargo-pants" data-price="7800"
+                    data-category="pants">
+                    <div class="product-image-container">
+                        <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=300&h=200&fit=crop&crop=center"
+                            alt="カーゴパンツ" class="product-image">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">クイックビュー</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">カーゴパンツ</h3>
+                        <div class="product-rating">
+                            <span class="stars">★★★★☆</span>
+                            <span class="rating-score">4.5</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">¥7,800</span>
+                        </div>
+                        <div class="product-colors">
+                            <span class="color-dot" style="background-color: #8B4513;" title="ブラウン"></span>
+                            <span class="color-dot" style="background-color: #4169E1;" title="ネイビー"></span>
+                            <span class="color-dot" style="background-color: #228B22;" title="オリーブ"></span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn btn-secondary">詳細を見る</button>
+                            <button class="btn btn-primary add-to-cart-btn">カートに入れる</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-product-id="dress-pants" data-price="9500"
+                    data-category="pants">
+                    <div class="product-image-container">
+                        <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=300&h=200&fit=crop&crop=center"
+                            alt="ドレスパンツ" class="product-image">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">クイックビュー</button>
+                        </div>
+                        <div class="product-badge premium">PREMIUM</div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">ドレスパンツ</h3>
+                        <div class="product-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-score">4.9</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">¥9,500</span>
+                        </div>
+                        <div class="product-colors">
+                            <span class="color-dot" style="background-color: #000000;" title="ブラック"></span>
+                            <span class="color-dot" style="background-color: #808080;" title="グレー"></span>
+                            <span class="color-dot" style="background-color: #4169E1;" title="ネイビー"></span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn btn-secondary">詳細を見る</button>
+                            <button class="btn btn-primary add-to-cart-btn">カートに入れる</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-product-id="shorts" data-price="4500"
+                    data-category="shorts">
+                    <div class="product-image-container">
+                        <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=300&h=200&fit=crop&crop=center"
+                            alt="カジュアルショーツ" class="product-image">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">クイックビュー</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">カジュアルショーツ</h3>
+                        <div class="product-rating">
+                            <span class="stars">★★★★☆</span>
+                            <span class="rating-score">4.3</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">¥4,500</span>
+                        </div>
+                        <div class="product-colors">
+                            <span class="color-dot" style="background-color: #4169E1;" title="ネイビー"></span>
+                            <span class="color-dot" style="background-color: #228B22;" title="オリーブ"></span>
+                            <span class="color-dot" style="background-color: #8B4513;" title="ブラウン"></span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn btn-secondary">詳細を見る</button>
+                            <button class="btn btn-primary add-to-cart-btn">カートに入れる</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-product-id="leggings" data-price="3800"
+                    data-category="leggings">
+                    <div class="product-image-container">
+                        <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=300&h=200&fit=crop&crop=center"
+                            alt="スポーツレギンス" class="product-image">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">クイックビュー</button>
+                        </div>
+                        <div class="product-badge sale">SALE</div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">スポーツレギンス</h3>
+                        <div class="product-rating">
+                            <span class="stars">★★★★☆</span>
+                            <span class="rating-score">4.6</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">¥3,800</span>
+                            <span class="original-price">¥5,200</span>
+                        </div>
+                        <div class="product-colors">
+                            <span class="color-dot" style="background-color: #000000;" title="ブラック"></span>
+                            <span class="color-dot" style="background-color: #FF69B4;" title="ピンク"></span>
+                            <span class="color-dot" style="background-color: #4169E1;" title="ネイビー"></span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn btn-secondary">詳細を見る</button>
+                            <button class="btn btn-primary add-to-cart-btn">カートに入れる</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-product-id="skirt" data-price="7200"
+                    data-category="skirt">
+                    <div class="product-image-container">
+                        <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=300&h=200&fit=crop&crop=center"
+                            alt="ミニスカート" class="product-image">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">クイックビュー</button>
+                        </div>
+                        <div class="product-badge new">NEW</div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">ミニスカート</h3>
+                        <div class="product-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-score">4.7</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">¥7,200</span>
+                        </div>
+                        <div class="product-colors">
+                            <span class="color-dot" style="background-color: #000000;" title="ブラック"></span>
+                            <span class="color-dot" style="background-color: #FF69B4;" title="ピンク"></span>
+                            <span class="color-dot" style="background-color: #F5DEB3;" title="ベージュ"></span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn btn-secondary">詳細を見る</button>
+                            <button class="btn btn-primary add-to-cart-btn">カートに入れる</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-product-id="jogger-pants" data-price="6800"
+                    data-category="pants">
+                    <div class="product-image-container">
+                        <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=300&h=200&fit=crop&crop=center"
+                            alt="ジョガーパンツ" class="product-image">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">クイックビュー</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">ジョガーパンツ</h3>
+                        <div class="product-rating">
+                            <span class="stars">★★★★☆</span>
+                            <span class="rating-score">4.4</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">¥6,800</span>
+                        </div>
+                        <div class="product-colors">
+                            <span class="color-dot" style="background-color: #808080;" title="グレー"></span>
+                            <span class="color-dot" style="background-color: #000000;" title="ブラック"></span>
+                            <span class="color-dot" style="background-color: #4169E1;" title="ネイビー"></span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn btn-secondary">詳細を見る</button>
+                            <button class="btn btn-primary add-to-cart-btn">カートに入れる</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ページネーション -->
+            <div class="pagination">
+                <a href="#" class="page-link active">1</a>
+                <a href="#" class="page-link">2</a>
+                <a href="#" class="page-link">3</a>
+                <a href="#" class="page-link">次へ ></a>
+            </div>
+        </div>
+    </main>
+
+    <!-- フッター -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>UrbanWear Japan</h3>
+                    <p>都会で働くあなたに寄り添う、シンプルで機能的なアパレルブランド</p>
+                </div>
+                <div class="footer-section">
+                    <h4>ショッピング</h4>
+                    <ul>
+                        <li><a href="tops.html">トップス</a></li>
+                        <li><a href="outer.html">アウター</a></li>
+                        <li><a href="bottoms.html">ボトムズ</a></li>
+                        <li><a href="campaign.html">セール</a></li>
+                        <li><a href="cart.html">カート</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>サポート</h4>
+                    <ul>
+                        <li><a href="#">お問い合わせ</a></li>
+                        <li><a href="#">サイズガイド</a></li>
+                        <li><a href="#">配送について</a></li>
+                        <li><a href="#">返品・交換</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>会社情報</h4>
+                    <ul>
+                        <li><a href="#">会社概要</a></li>
+                        <li><a href="#">プライバシーポリシー</a></li>
+                        <li><a href="#">利用規約</a></li>
+                        <li><a href="#">採用情報</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="copyright">© 2025 UrbanWear Japan. All rights reserved.</div>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram">📷</a>
+                    <a href="#" aria-label="Twitter">🐦</a>
+                    <a href="#" aria-label="Facebook">📘</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="cart.js"></script>
+    <script src="products.js"></script>
+</body>
+
+</html>

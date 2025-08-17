@@ -170,7 +170,7 @@ document.addEventListener('click', function (e) {
                 price: parseInt(e.target.dataset.productPrice),
                 image: e.target.dataset.productImage
             };
-            
+
             // デバッグ用ログ
             console.log('商品詳細ページからカート追加:', product);
         } else {
@@ -180,14 +180,14 @@ document.addEventListener('click', function (e) {
                 const priceElement = productCard.querySelector('.current-price');
                 const priceText = priceElement ? priceElement.textContent : '';
                 const price = parseInt(priceText.replace(/[^\d]/g, ''));
-                
+
                 product = {
                     id: productCard.dataset.productId || Date.now().toString(),
                     name: productCard.querySelector('.product-name').textContent,
                     price: price,
                     image: productCard.querySelector('.product-image').src
                 };
-                
+
                 // デバッグ用ログ
                 console.log('商品一覧ページからカート追加:', product);
             }
