@@ -35,27 +35,27 @@
     --beige-light: #F5F5DC;
     --beige-medium: #E8DCC0;
     --beige-dark: #D2B48C;
-    
+
     /* バーガンディ系 */
     --burgundy-light: #8B2635;
     --burgundy-medium: #6B1B2A;
     --burgundy-dark: #4A0F1A;
-    
+
     /* ワインレッド系 */
     --wine-light: #B91C3C;
     --wine-medium: #8B1530;
     --wine-dark: #5D0E20;
-    
+
     /* アクセントカラー */
     --accent-beige: #D2B48C;
     --accent-burgundy: #8B2635;
     --accent-wine: #B91C3C;
-    
+
     /* テキストカラー */
     --text-dark: #2C1810;
     --text-medium: #4A0F1A;
     --text-light: #6B1B2A;
-    
+
     /* 背景色 */
     --bg-primary: #F5F5DC;
     --bg-secondary: #E8DCC0;
@@ -1746,6 +1746,7 @@ footer {
 }
 
 @keyframes float {
+
     0%,
     100% {
         transform: translateY(0px);
@@ -2512,5 +2513,333 @@ select:focus {
 @keyframes spin {
     to {
         transform: rotate(360deg);
+    }
+}
+
+/* ヒーロースライダー */
+.hero-slider {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.slide-image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slide-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(139, 38, 53, 0.8) 0%, rgba(185, 28, 60, 0.6) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide-content {
+    text-align: center;
+    color: white;
+    max-width: 600px;
+    padding: var(--spacing-xl);
+}
+
+.slide-title {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-md);
+    font-weight: 800;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.slide-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-lg);
+    opacity: 0.9;
+}
+
+.slide-badges {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
+}
+
+.slide-badges .badge {
+    padding: var(--spacing-xs) var(--spacing-md);
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.slide-badges .badge.sale {
+    background: var(--accent-burgundy);
+    color: white;
+}
+
+.slide-badges .badge.new {
+    background: var(--accent-beige);
+    color: var(--text-dark);
+}
+
+.slide-badges .badge.hot {
+    background: var(--accent-wine);
+    color: white;
+}
+
+.slide-badges .badge.autumn {
+    background: var(--beige-dark);
+    color: var(--text-dark);
+}
+
+.slide-badges .badge.limited {
+    background: var(--burgundy-medium);
+    color: white;
+}
+
+.slide-badges .badge.popular {
+    background: var(--accent-beige);
+    color: var(--text-dark);
+}
+
+/* スライダーナビゲーション */
+.slider-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 var(--spacing-lg);
+    z-index: 10;
+}
+
+.nav-btn {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: var(--transition);
+    backdrop-filter: blur(10px);
+}
+
+.nav-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+}
+
+/* スライダーインジケーター */
+.slider-indicators {
+    position: absolute;
+    bottom: var(--spacing-lg);
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: var(--spacing-sm);
+    z-index: 10;
+}
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.indicator.active {
+    background: white;
+    transform: scale(1.2);
+}
+
+/* プロモーションバナー */
+.promo-banners {
+    margin: var(--spacing-xl) 0;
+}
+
+.banner-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.promo-banner {
+    position: relative;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(139, 38, 53, 0.15);
+    transition: var(--transition);
+}
+
+.promo-banner:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(139, 38, 53, 0.25);
+}
+
+.banner-image {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+}
+
+.banner-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.promo-banner:hover .banner-image img {
+    transform: scale(1.05);
+}
+
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(139, 38, 53, 0.9) 0%, rgba(185, 28, 60, 0.8) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-lg);
+}
+
+.banner-content {
+    text-align: center;
+    color: white;
+}
+
+.banner-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-sm);
+    font-weight: 700;
+}
+
+.banner-content .discount {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--accent-beige);
+    margin-bottom: var(--spacing-sm);
+}
+
+.banner-content .period,
+.banner-content .target,
+.banner-content .coupon {
+    font-size: 0.9rem;
+    margin-bottom: var(--spacing-xs);
+    opacity: 0.9;
+}
+
+.banner-content .btn {
+    margin-top: var(--spacing-md);
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.banner-content .btn:hover {
+    background: white;
+    color: var(--accent-burgundy);
+}
+
+/* キャンペーンページ用画像バナー */
+.image-banners {
+    margin-bottom: var(--spacing-xl);
+}
+
+.banner-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.image-banner {
+    position: relative;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(139, 38, 53, 0.15);
+    transition: var(--transition);
+}
+
+.image-banner:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(139, 38, 53, 0.25);
+}
+
+.image-banner .banner-image {
+    height: 300px;
+}
+
+.image-banner .banner-content h3 {
+    font-size: 1.8rem;
+}
+
+.image-banner .banner-content .discount {
+    font-size: 2.5rem;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .hero-slider {
+        height: 400px;
+    }
+
+    .slide-title {
+        font-size: 2rem;
+    }
+
+    .slide-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .banner-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .banner-row {
+        grid-template-columns: 1fr;
+    }
+
+    .slider-nav {
+        padding: 0 var(--spacing-md);
+    }
+
+    .nav-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1.5rem;
     }
 }

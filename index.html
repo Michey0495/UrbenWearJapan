@@ -45,11 +45,132 @@
         <div class="container">
             <!-- ヒーローセクション -->
             <section class="hero">
-                <h1>Minimalist Styles for Urban Life</h1>
-                <p>都会で働くあなたに寄り添う、シンプルで機能的なアパレルブランド</p>
-                <div class="hero-actions">
-                    <a href="tops.html" class="btn btn-primary">商品を見る</a>
-                    <a href="campaign.html" class="btn btn-secondary">セール情報</a>
+                <div class="hero-slider">
+                    <!-- スライド1: 春の新作アライバル -->
+                    <div class="slide active">
+                        <div class="slide-image">
+                            <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1200&h=600&fit=crop&crop=center" alt="春の新作アライバル">
+                            <div class="slide-overlay">
+                                <div class="slide-content">
+                                    <h2 class="slide-title">春の新作アライバル</h2>
+                                    <p class="slide-subtitle">最大70%OFFでお買い得！</p>
+                                    <div class="slide-badges">
+                                        <span class="badge sale">SALE</span>
+                                        <span class="badge new">NEW</span>
+                                        <span class="badge hot">HOT</span>
+                                    </div>
+                                    <a href="campaign.html" class="btn btn-primary">詳細を見る</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- スライド2: 秋のスタイルコレクション -->
+                    <div class="slide">
+                        <div class="slide-image">
+                            <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=1200&h=600&fit=crop&crop=center" alt="秋のスタイルコレクション">
+                            <div class="slide-overlay">
+                                <div class="slide-content">
+                                    <h2 class="slide-title">秋のスタイルコレクション</h2>
+                                    <p class="slide-subtitle">15%OFF ジャケット・ニット特集</p>
+                                    <div class="slide-badges">
+                                        <span class="badge autumn">AUTUMN</span>
+                                        <span class="badge limited">限定</span>
+                                    </div>
+                                    <a href="outer.html" class="btn btn-primary">商品を見る</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- スライド3: アウター大特価セール -->
+                    <div class="slide">
+                        <div class="slide-image">
+                            <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=1200&h=600&fit=crop&crop=center" alt="アウター大特価セール">
+                            <div class="slide-overlay">
+                                <div class="slide-content">
+                                    <h2 class="slide-title">アウター大特価セール</h2>
+                                    <p class="slide-subtitle">最大60%OFF 防水・防風機能付き</p>
+                                    <div class="slide-badges">
+                                        <span class="badge sale">SALE</span>
+                                        <span class="badge popular">人気</span>
+                                    </div>
+                                    <a href="outer.html" class="btn btn-primary">商品を見る</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- スライダーナビゲーション -->
+                <div class="slider-nav">
+                    <button class="nav-btn prev" onclick="changeSlide(-1)">‹</button>
+                    <button class="nav-btn next" onclick="changeSlide(1)">›</button>
+                </div>
+
+                <!-- スライダーインジケーター -->
+                <div class="slider-indicators">
+                    <span class="indicator active" onclick="currentSlide(1)"></span>
+                    <span class="indicator" onclick="currentSlide(2)"></span>
+                    <span class="indicator" onclick="currentSlide(3)"></span>
+                </div>
+            </section>
+
+            <!-- プロモーションバナー -->
+            <section class="promo-banners">
+                <div class="container">
+                    <div class="banner-grid">
+                        <!-- 秋のスタイルコレクション -->
+                        <div class="promo-banner autumn">
+                            <div class="banner-image">
+                                <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?w=400&h=300&fit=crop&crop=center" alt="秋のスタイルコレクション">
+                                <div class="banner-overlay">
+                                    <div class="banner-content">
+                                        <h3>秋のスタイルコレクション</h3>
+                                        <p class="discount">15%OFF</p>
+                                        <p class="period">2025/9/1 - 9/30</p>
+                                        <p class="target">対象: ジャケット・ニット</p>
+                                        <p class="coupon">クーポン: AUTUMN25</p>
+                                        <a href="outer.html" class="btn btn-outline">今すぐチェック</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 春の新作セール -->
+                        <div class="promo-banner spring">
+                            <div class="banner-image">
+                                <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=400&h=300&fit=crop&crop=center" alt="春の新作セール">
+                                <div class="banner-overlay">
+                                    <div class="banner-content">
+                                        <h3>春の新作セール</h3>
+                                        <p class="discount">最大70%OFF</p>
+                                        <p class="period">2025/3/1 - 3/15</p>
+                                        <p class="target">対象: 全カテゴリ</p>
+                                        <p class="coupon">限定トートバッグ付き</p>
+                                        <a href="campaign.html" class="btn btn-outline">詳細を見る</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ボトムズ春コレクション -->
+                        <div class="promo-banner bottoms">
+                            <div class="banner-image">
+                                <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?w=400&h=300&fit=crop&crop=center" alt="ボトムズ春コレクション">
+                                <div class="banner-overlay">
+                                    <div class="banner-content">
+                                        <h3>ボトムズ春コレクション</h3>
+                                        <p class="discount">最大50%OFF</p>
+                                        <p class="period">2025/3/1 - 4/15</p>
+                                        <p class="target">対象: ボトムズ全商品</p>
+                                        <p class="coupon">春らしいパステルカラー</p>
+                                        <a href="bottoms.html" class="btn btn-outline">商品を見る</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -212,6 +333,43 @@
     </footer>
 
     <script src="cart.js"></script>
+    <script>
+        // ヒーロースライダー
+        let currentSlideIndex = 0;
+        const slides = document.querySelectorAll('.slide');
+        const indicators = document.querySelectorAll('.indicator');
+
+        function showSlide(index) {
+            // 全てのスライドを非表示
+            slides.forEach(slide => slide.classList.remove('active'));
+            indicators.forEach(indicator => indicator.classList.remove('active'));
+
+            // 現在のスライドを表示
+            if (index >= slides.length) currentSlideIndex = 0;
+            if (index < 0) currentSlideIndex = slides.length - 1;
+
+            slides[currentSlideIndex].classList.add('active');
+            indicators[currentSlideIndex].classList.add('active');
+        }
+
+        function changeSlide(direction) {
+            currentSlideIndex += direction;
+            showSlide(currentSlideIndex);
+        }
+
+        function currentSlide(index) {
+            currentSlideIndex = index - 1;
+            showSlide(currentSlideIndex);
+        }
+
+        // 自動スライド
+        setInterval(() => {
+            changeSlide(1);
+        }, 5000);
+
+        // 初期表示
+        showSlide(0);
+    </script>
 </body>
 
 </html>
