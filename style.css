@@ -73,7 +73,7 @@ body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 var(--spacing-sm);
+    padding: 0 var(--spacing-md);
 }
 
 /* ヘッダー */
@@ -91,6 +91,11 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: var(--spacing-md) 0;
+    flex-wrap: nowrap;
+}
+
+.logo {
+    flex-shrink: 0;
 }
 
 .logo a {
@@ -99,11 +104,19 @@ header {
     color: var(--accent-burgundy);
     text-decoration: none;
     transition: var(--transition);
+    white-space: nowrap;
 }
 
 .logo a:hover {
     color: var(--burgundy-dark);
     transform: scale(1.05);
+}
+
+nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    margin: 0 var(--spacing-lg);
 }
 
 nav ul {
@@ -112,6 +125,11 @@ nav ul {
     gap: var(--spacing-lg);
     margin: 0;
     padding: 0;
+    flex-wrap: nowrap;
+}
+
+nav li {
+    white-space: nowrap;
 }
 
 nav a {
@@ -122,6 +140,7 @@ nav a {
     border-radius: var(--border-radius);
     transition: var(--transition);
     position: relative;
+    white-space: nowrap;
 }
 
 nav a:hover {
@@ -146,9 +165,7 @@ nav a:hover::after {
 }
 
 .header-actions {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-sm);
+    flex-shrink: 0;
 }
 
 .cart-link {
@@ -206,26 +223,31 @@ nav a:hover::after {
 /* メインコンテンツ */
 .main-content {
     min-height: calc(100vh - 200px);
-    padding: var(--spacing-xl) 0;
+    padding: var(--spacing-lg) 0;
 }
 
 /* ページヘッダー */
 .page-header {
     text-align: center;
     margin-bottom: var(--spacing-xl);
+    padding: var(--spacing-xl) 0;
+    background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+    border-radius: var(--border-radius);
 }
 
 .page-header h1 {
     font-size: 2.5rem;
-    margin-bottom: var(--spacing-sm);
-    color: var(--primary-color);
+    color: var(--burgundy-dark);
+    margin-bottom: var(--spacing-md);
+    font-weight: 800;
 }
 
 .page-header p {
-    font-size: 1.1rem;
-    color: var(--text-light);
+    font-size: 1.2rem;
+    color: var(--text-medium);
     max-width: 600px;
     margin: 0 auto;
+    line-height: 1.6;
 }
 
 .result-count {
@@ -278,47 +300,54 @@ nav a:hover::after {
 
 /* フィルターセクション */
 .filters-section {
-    background-color: #f8f9fa;
+    background: white;
     padding: var(--spacing-lg);
     border-radius: var(--border-radius);
+    box-shadow: 0 2px 15px rgba(139, 38, 53, 0.1);
     margin-bottom: var(--spacing-lg);
+    border: 1px solid var(--beige-medium);
+}
+
+.filters-content {
     display: flex;
-    flex-wrap: wrap;
-    gap: var(--spacing-md);
     align-items: center;
-    justify-content: space-between;
+    gap: var(--spacing-lg);
+    flex-wrap: wrap;
 }
 
 .search-box {
-    display: flex;
-    align-items: center;
-    background: white;
-    border: 1px solid var(--border-color);
-    border-radius: var(--border-radius);
-    overflow: hidden;
     flex: 1;
-    max-width: 400px;
+    min-width: 250px;
 }
 
 .search-box input {
-    flex: 1;
-    padding: var(--spacing-sm);
-    border: none;
-    outline: none;
+    width: 100%;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border: 2px solid var(--beige-medium);
+    border-radius: var(--border-radius);
     font-size: 1rem;
+    transition: var(--transition);
 }
 
-.search-btn {
-    background: var(--accent-color);
-    color: white;
-    border: none;
-    padding: var(--spacing-sm);
+.search-box input:focus {
+    outline: none;
+    border-color: var(--accent-burgundy);
+    box-shadow: 0 0 0 3px rgba(139, 38, 53, 0.1);
+}
+
+.sort-select {
+    padding: var(--spacing-sm) var(--spacing-md);
+    border: 2px solid var(--beige-medium);
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    background: white;
     cursor: pointer;
     transition: var(--transition);
 }
 
-.search-btn:hover {
-    background: #357abd;
+.sort-select:focus {
+    outline: none;
+    border-color: var(--accent-burgundy);
 }
 
 .filter-controls {
@@ -326,14 +355,6 @@ nav a:hover::after {
     gap: var(--spacing-md);
     align-items: center;
     flex-wrap: wrap;
-}
-
-.sort-select {
-    padding: var(--spacing-sm);
-    border: 1px solid var(--border-color);
-    border-radius: var(--border-radius);
-    background: white;
-    cursor: pointer;
 }
 
 .price-filter {
@@ -360,12 +381,12 @@ nav a:hover::after {
 /* 商品グリッド */
 .products-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: var(--spacing-lg);
     margin-bottom: var(--spacing-xl);
 }
 
-/* 商品カードの改善 */
+/* 商品カードの最適化 */
 .product-card {
     background: white;
     border-radius: var(--border-radius);
@@ -374,6 +395,9 @@ nav a:hover::after {
     transition: var(--transition);
     border: 1px solid var(--beige-medium);
     position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .product-card:hover {
@@ -386,6 +410,7 @@ nav a:hover::after {
     position: relative;
     height: 250px;
     overflow: hidden;
+    flex-shrink: 0;
 }
 
 .product-image {
@@ -426,6 +451,7 @@ nav a:hover::after {
     font-weight: 600;
     cursor: pointer;
     transition: var(--transition);
+    font-size: 0.9rem;
 }
 
 .quick-view-btn:hover {
@@ -463,6 +489,9 @@ nav a:hover::after {
 
 .product-info {
     padding: var(--spacing-md);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .product-name {
@@ -471,6 +500,7 @@ nav a:hover::after {
     color: var(--text-dark);
     margin-bottom: var(--spacing-sm);
     line-height: 1.3;
+    flex-shrink: 0;
 }
 
 .product-price {
@@ -478,6 +508,7 @@ nav a:hover::after {
     align-items: center;
     gap: var(--spacing-sm);
     margin-bottom: var(--spacing-sm);
+    flex-shrink: 0;
 }
 
 .original-price {
@@ -497,6 +528,7 @@ nav a:hover::after {
     align-items: center;
     gap: var(--spacing-xs);
     margin-bottom: var(--spacing-sm);
+    flex-shrink: 0;
 }
 
 .stars {
@@ -513,6 +545,7 @@ nav a:hover::after {
     display: flex;
     gap: var(--spacing-xs);
     margin-bottom: var(--spacing-sm);
+    flex-shrink: 0;
 }
 
 .color-option {
@@ -533,7 +566,15 @@ nav a:hover::after {
 .product-actions {
     display: flex;
     gap: var(--spacing-sm);
-    margin-top: var(--spacing-md);
+    margin-top: auto;
+    flex-shrink: 0;
+}
+
+.product-actions .btn {
+    flex: 1;
+    text-align: center;
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-size: 0.9rem;
 }
 
 /* ボタングループ */
@@ -668,46 +709,47 @@ nav a:hover::after {
 
 /* カテゴリーセクション */
 .categories {
-    margin-top: var(--spacing-xl);
-}
-
-.categories h2 {
-    text-align: center;
-    margin-bottom: var(--spacing-lg);
-    font-size: 2rem;
-    color: var(--primary-color);
-}
-
-.categories-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: var(--spacing-lg);
+    margin: var(--spacing-xl) 0;
 }
 
 .category-card {
     background: white;
-    border: 1px solid var(--border-color);
     border-radius: var(--border-radius);
     overflow: hidden;
+    box-shadow: 0 2px 15px rgba(139, 38, 53, 0.1);
     transition: var(--transition);
-    text-align: center;
+    border: 1px solid var(--beige-medium);
+    text-decoration: none;
+    color: inherit;
 }
 
 .category-card:hover {
     transform: translateY(-5px);
-    box-shadow: var(--shadow-hover);
+    box-shadow: 0 8px 30px rgba(139, 38, 53, 0.2);
+    border-color: var(--accent-burgundy);
 }
 
 .category-card img {
     width: 100%;
     height: 200px;
     object-fit: cover;
+    transition: var(--transition);
+}
+
+.category-card:hover img {
+    transform: scale(1.05);
 }
 
 .category-card h3 {
     padding: var(--spacing-md);
     margin: 0;
-    color: var(--primary-color);
+    color: var(--burgundy-dark);
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-align: center;
 }
 
 .category-card p {
@@ -724,31 +766,33 @@ nav a:hover::after {
 .pagination {
     display: flex;
     justify-content: center;
-    gap: var(--spacing-xs);
+    align-items: center;
+    gap: var(--spacing-sm);
     margin-top: var(--spacing-xl);
 }
 
-.page-link {
+.pagination a,
+.pagination span {
     padding: var(--spacing-sm) var(--spacing-md);
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--beige-medium);
     border-radius: var(--border-radius);
     text-decoration: none;
-    color: var(--text-color);
+    color: var(--text-medium);
     transition: var(--transition);
     min-width: 40px;
     text-align: center;
 }
 
-.page-link:hover {
-    background-color: var(--accent-color);
+.pagination a:hover {
+    background: var(--accent-burgundy);
     color: white;
-    border-color: var(--accent-color);
+    border-color: var(--accent-burgundy);
 }
 
-.page-link.active {
-    background-color: var(--accent-color);
+.pagination .current {
+    background: var(--accent-burgundy);
     color: white;
-    border-color: var(--accent-color);
+    border-color: var(--accent-burgundy);
 }
 
 .page-link.next {
@@ -1001,9 +1045,10 @@ nav a:hover::after {
 
 /* フッター */
 footer {
-    background-color: #f8f9fa;
-    border-top: 1px solid var(--border-color);
+    background: linear-gradient(135deg, var(--burgundy-dark) 0%, var(--wine-dark) 100%);
+    color: white;
     padding: var(--spacing-xl) 0 var(--spacing-lg);
+    margin-top: var(--spacing-xl);
 }
 
 .footer-content {
@@ -1015,67 +1060,53 @@ footer {
 
 .footer-section h3,
 .footer-section h4 {
+    color: var(--accent-beige);
     margin-bottom: var(--spacing-md);
-    color: var(--primary-color);
-}
-
-.footer-section p {
-    color: var(--text-light);
-    line-height: 1.6;
 }
 
 .footer-section ul {
     list-style: none;
+    padding: 0;
 }
 
-.footer-section ul li {
-    margin-bottom: var(--spacing-xs);
+.footer-section li {
+    margin-bottom: var(--spacing-sm);
 }
 
-.footer-section ul li a {
-    color: var(--text-light);
+.footer-section a {
+    color: rgba(255, 255, 255, 0.8);
     text-decoration: none;
     transition: var(--transition);
 }
 
-.footer-section ul li a:hover {
-    color: var(--accent-color);
+.footer-section a:hover {
+    color: var(--accent-beige);
 }
 
 .footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: var(--spacing-lg);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: var(--spacing-lg);
-    border-top: 1px solid var(--border-color);
-}
-
-.copyright {
-    color: var(--text-light);
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
 }
 
 .social-links {
     display: flex;
-    gap: var(--spacing-sm);
+    gap: var(--spacing-md);
 }
 
 .social-links a {
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    background: var(--accent-color);
-    color: white;
-    text-decoration: none;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.5rem;
     transition: var(--transition);
 }
 
 .social-links a:hover {
-    background: #357abd;
-    transform: translateY(-2px);
+    color: var(--accent-beige);
+    transform: scale(1.2);
 }
 
 /* 商品詳細ページのスタイル */
@@ -2577,7 +2608,7 @@ select:focus {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(139, 38, 53, 0.85) 0%, rgba(185, 28, 60, 0.75) 50%, rgba(139, 38, 53, 0.9) 100%);
+    background: linear-gradient(135deg, rgba(139, 38, 53, 0.7) 0%, rgba(185, 28, 60, 0.6) 50%, rgba(139, 38, 53, 0.8) 100%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2588,26 +2619,28 @@ select:focus {
     color: white;
     max-width: 600px;
     padding: var(--spacing-xl);
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.4);
     border-radius: var(--border-radius);
     backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .slide-title {
     font-size: 3rem;
     margin-bottom: var(--spacing-md);
     font-weight: 800;
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
     color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    line-height: 1.2;
 }
 
 .slide-subtitle {
     font-size: 1.5rem;
     margin-bottom: var(--spacing-lg);
-    opacity: 1;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
     font-weight: 600;
+    line-height: 1.3;
 }
 
 .slide-badges {
@@ -2942,5 +2975,232 @@ select:focus {
     .banner-content .target,
     .banner-content .coupon {
         font-size: 0.8rem;
+    }
+}
+
+/* レスポンシブ対応の強化 */
+@media (max-width: 1200px) {
+    .container {
+        max-width: 100%;
+        padding: 0 var(--spacing-lg);
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-slider {
+        height: 500px;
+    }
+
+    .slide-title {
+        font-size: 2.5rem;
+    }
+
+    .slide-subtitle {
+        font-size: 1.3rem;
+    }
+
+    .banner-grid {
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    }
+
+    .categories {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 var(--spacing-md);
+    }
+
+    .hero-slider {
+        height: 400px;
+    }
+
+    .slide-title {
+        font-size: 2rem;
+    }
+
+    .slide-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .slide-content {
+        padding: var(--spacing-lg);
+        max-width: 90%;
+    }
+
+    .banner-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+        padding: 0 var(--spacing-sm);
+    }
+
+    .banner-row {
+        grid-template-columns: 1fr;
+    }
+
+    .promo-banner {
+        height: 250px;
+    }
+
+    .banner-content h3 {
+        font-size: 1.2rem;
+    }
+
+    .banner-content .discount {
+        font-size: 1.5rem;
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        gap: var(--spacing-md);
+    }
+
+    .categories {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: var(--spacing-md);
+    }
+
+    .slider-nav {
+        padding: 0 var(--spacing-md);
+    }
+
+    .nav-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1.5rem;
+    }
+
+    .slider-indicators {
+        bottom: var(--spacing-md);
+    }
+
+    /* ヘッダーのモバイル対応 */
+    .header-content {
+        flex-direction: column;
+        gap: var(--spacing-md);
+        padding: var(--spacing-sm) 0;
+    }
+
+    nav {
+        margin: 0;
+        order: 3;
+        width: 100%;
+    }
+
+    nav ul {
+        justify-content: center;
+        gap: var(--spacing-md);
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        order: 1;
+    }
+
+    .header-actions {
+        order: 2;
+    }
+
+    /* フィルターのモバイル対応 */
+    .filters-content {
+        flex-direction: column;
+        align-items: stretch;
+        gap: var(--spacing-md);
+    }
+
+    .search-box {
+        min-width: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 var(--spacing-sm);
+    }
+
+    .hero-slider {
+        height: 300px;
+    }
+
+    .slide-title {
+        font-size: 1.5rem;
+    }
+
+    .slide-subtitle {
+        font-size: 1rem;
+    }
+
+    .slide-content {
+        padding: var(--spacing-md);
+    }
+
+    .promo-banner {
+        height: 220px;
+    }
+
+    .banner-content h3 {
+        font-size: 1.1rem;
+    }
+
+    .banner-content .discount {
+        font-size: 1.3rem;
+    }
+
+    .banner-content .period,
+    .banner-content .target,
+    .banner-content .coupon {
+        font-size: 0.8rem;
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+
+    .categories {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+
+    .page-header h1 {
+        font-size: 2rem;
+    }
+
+    .page-header p {
+        font-size: 1rem;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* 印刷対応 */
+@media print {
+    .hero-slider,
+    .slider-nav,
+    .slider-indicators,
+    .promo-banners,
+    .product-overlay,
+    .product-actions {
+        display: none;
+    }
+
+    .product-card {
+        break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid #ccc;
     }
 }
