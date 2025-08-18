@@ -122,60 +122,79 @@
             <!-- プロモーションバナー -->
             <section class="promo-banners">
                 <div class="container">
-                    <div class="banner-grid">
-                        <!-- 秋のスタイルコレクション -->
-                        <div class="promo-banner autumn">
-                            <div class="banner-image">
-                                <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?w=400&h=300&fit=crop&crop=center"
-                                    alt="秋のスタイルコレクション">
-                                <div class="banner-overlay">
-                                    <div class="banner-content">
-                                        <h3>秋のスタイルコレクション</h3>
-                                        <p class="discount">15%OFF</p>
-                                        <p class="period">2025/9/1 - 9/30</p>
-                                        <p class="target">対象: ジャケット・ニット</p>
-                                        <p class="coupon">クーポン: AUTUMN25</p>
-                                        <a href="outer.html" class="btn btn-outline">今すぐチェック</a>
+                    <div class="promo-slider">
+                        <!-- スライド1: 秋のスタイルコレクション -->
+                        <div class="promo-slide active">
+                            <div class="promo-banner autumn">
+                                <div class="banner-image">
+                                    <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=400&h=300&fit=crop&crop=center"
+                                        alt="秋のスタイルコレクション">
+                                    <div class="banner-overlay">
+                                        <div class="banner-content">
+                                            <h3>秋のスタイルコレクション</h3>
+                                            <p class="discount">15%OFF</p>
+                                            <p class="period">2025/9/1 - 9/30</p>
+                                            <p class="target">対象: ジャケット・ニット</p>
+                                            <p class="coupon">クーポン: AUTUMN25</p>
+                                            <a href="outer.html" class="btn btn-outline">今すぐチェック</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- 春の新作セール -->
-                        <div class="promo-banner spring">
-                            <div class="banner-image">
-                                <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=400&h=300&fit=crop&crop=center"
-                                    alt="春の新作セール">
-                                <div class="banner-overlay">
-                                    <div class="banner-content">
-                                        <h3>春の新作セール</h3>
-                                        <p class="discount">最大70%OFF</p>
-                                        <p class="period">2025/3/1 - 3/15</p>
-                                        <p class="target">対象: 全カテゴリ</p>
-                                        <p class="coupon">限定トートバッグ付き</p>
-                                        <a href="campaign.html" class="btn btn-outline">詳細を見る</a>
+                        <!-- スライド2: 春の新作セール -->
+                        <div class="promo-slide">
+                            <div class="promo-banner spring">
+                                <div class="banner-image">
+                                    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=400&h=300&fit=crop&crop=center"
+                                        alt="春の新作セール">
+                                    <div class="banner-overlay">
+                                        <div class="banner-content">
+                                            <h3>春の新作セール</h3>
+                                            <p class="discount">最大70%OFF</p>
+                                            <p class="period">2025/3/1 - 3/15</p>
+                                            <p class="target">対象: 全カテゴリ</p>
+                                            <p class="coupon">限定トートバッグ付き</p>
+                                            <a href="campaign.html" class="btn btn-outline">詳細を見る</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- ボトムズ春コレクション -->
-                        <div class="promo-banner bottoms">
-                            <div class="banner-image">
-                                <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?w=400&h=300&fit=crop&crop=center"
-                                    alt="ボトムズ春コレクション">
-                                <div class="banner-overlay">
-                                    <div class="banner-content">
-                                        <h3>ボトムズ春コレクション</h3>
-                                        <p class="discount">最大50%OFF</p>
-                                        <p class="period">2025/3/1 - 4/15</p>
-                                        <p class="target">対象: ボトムズ全商品</p>
-                                        <p class="coupon">春らしいパステルカラー</p>
-                                        <a href="bottoms.html" class="btn btn-outline">商品を見る</a>
+                        <!-- スライド3: ボトムズ春コレクション -->
+                        <div class="promo-slide">
+                            <div class="promo-banner bottoms">
+                                <div class="banner-image">
+                                    <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?w=400&h=300&fit=crop&crop=center"
+                                        alt="ボトムズ春コレクション">
+                                    <div class="banner-overlay">
+                                        <div class="banner-content">
+                                            <h3>ボトムズ春コレクション</h3>
+                                            <p class="discount">最大50%OFF</p>
+                                            <p class="period">2025/3/1 - 4/15</p>
+                                            <p class="target">対象: ボトムズ全商品</p>
+                                            <p class="coupon">春らしいパステルカラー</p>
+                                            <a href="bottoms.html" class="btn btn-outline">商品を見る</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
+
+                    <!-- プロモースライダーナビゲーション -->
+                    <div class="promo-slider-nav">
+                        <button class="promo-nav-btn prev" onclick="changePromoSlide(-1)">‹</button>
+                        <button class="promo-nav-btn next" onclick="changePromoSlide(1)">›</button>
+                    </div>
+
+                    <!-- プロモースライダーインジケーター -->
+                    <div class="promo-slider-indicators">
+                        <span class="promo-indicator active" onclick="currentPromoSlide(1)"></span>
+                        <span class="promo-indicator" onclick="currentPromoSlide(2)"></span>
+                        <span class="promo-indicator" onclick="currentPromoSlide(3)"></span>
                     </div>
                 </div>
             </section>
@@ -375,6 +394,42 @@
 
         // 初期表示
         showSlide(0);
+
+        // プロモーションスライダー
+        let currentPromoSlideIndex = 0;
+        const promoSlides = document.querySelectorAll('.promo-slide');
+        const promoIndicators = document.querySelectorAll('.promo-indicator');
+
+        function showPromoSlide(index) {
+            // 全てのスライドを非表示
+            promoSlides.forEach(slide => slide.classList.remove('active'));
+            promoIndicators.forEach(indicator => indicator.classList.remove('active'));
+
+            // 現在のスライドを表示
+            if (index >= promoSlides.length) currentPromoSlideIndex = 0;
+            if (index < 0) currentPromoSlideIndex = promoSlides.length - 1;
+
+            promoSlides[currentPromoSlideIndex].classList.add('active');
+            promoIndicators[currentPromoSlideIndex].classList.add('active');
+        }
+
+        function changePromoSlide(direction) {
+            currentPromoSlideIndex += direction;
+            showPromoSlide(currentPromoSlideIndex);
+        }
+
+        function currentPromoSlide(index) {
+            currentPromoSlideIndex = index - 1;
+            showPromoSlide(currentPromoSlideIndex);
+        }
+
+        // 自動スライド
+        setInterval(() => {
+            changePromoSlide(1);
+        }, 5000);
+
+        // 初期表示
+        showPromoSlide(0);
     </script>
 </body>
 
