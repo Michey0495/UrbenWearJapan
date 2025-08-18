@@ -2829,8 +2829,8 @@ select:focus {
 .banner-content .period,
 .banner-content .target,
 .banner-content .coupon {
-    font-size: 0.85rem;
-    margin-bottom: var(--spacing-xs);
+    font-size: 1rem;
+    margin-bottom: var(--spacing-sm);
     opacity: 0.95;
     line-height: 1.4;
 }
@@ -3211,7 +3211,7 @@ select:focus {
 .promo-slider {
     position: relative;
     width: 100%;
-    height: 450px;
+    height: 585px;
     overflow: hidden;
     border-radius: var(--border-radius);
     margin-bottom: var(--spacing-lg);
@@ -3449,4 +3449,12 @@ select:focus {
 .banner-content .target,
 .banner-content .coupon {
     font-size: 0.85rem;
+}
+
+.promo-slider {
+    height: 455px;
+}
+
+.promo-slider {
+    height: 390px;
 }
