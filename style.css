@@ -3211,7 +3211,7 @@ select:focus {
 .promo-slider {
     position: relative;
     width: 100%;
-    height: 300px;
+    height: 450px;
     overflow: hidden;
     border-radius: var(--border-radius);
     margin-bottom: var(--spacing-lg);
@@ -3275,47 +3275,48 @@ select:focus {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: var(--spacing-lg);
+    padding: var(--spacing-xl);
 }
 
 .banner-content {
     text-align: center;
     color: white;
     width: 100%;
-    max-width: 320px;
+    max-width: 400px;
 }
 
 .banner-content h3 {
-    font-size: 1.4rem;
-    margin-bottom: var(--spacing-sm);
+    font-size: 1.6rem;
+    margin-bottom: var(--spacing-md);
     font-weight: 700;
     line-height: 1.3;
 }
 
 .banner-content .discount {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     font-weight: 800;
     color: var(--accent-beige);
-    margin-bottom: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .banner-content .period,
 .banner-content .target,
 .banner-content .coupon {
-    font-size: 0.85rem;
-    margin-bottom: var(--spacing-xs);
+    font-size: 1rem;
+    margin-bottom: var(--spacing-sm);
     opacity: 0.95;
     line-height: 1.4;
 }
 
 .banner-content .btn {
-    margin-top: var(--spacing-md);
+    margin-top: var(--spacing-lg);
     background: transparent;
     color: white;
     border: 2px solid white;
-    font-size: 0.9rem;
-    padding: var(--spacing-sm) var(--spacing-md);
+    font-size: 1rem;
+    padding: var(--spacing-md) var(--spacing-lg);
+    min-width: 140px;
 }
 
 .banner-content .btn:hover {
@@ -3386,14 +3387,12 @@ select:focus {
     border-color: var(--accent-burgundy);
 }
 
-.banner-grid {
-    grid-template-columns: 1fr;
-    gap: var(--spacing-md);
-    padding: 0 var(--spacing-sm);
+.promo-banner {
+    height: 250px;
 }
 
 .promo-slider {
-    height: 250px;
+    height: 350px;
 }
 
 .promo-slider-nav {
@@ -3407,21 +3406,25 @@ select:focus {
 }
 
 .banner-content h3 {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 
 .banner-content .discount {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
 }
 
 .banner-content .period,
 .banner-content .target,
 .banner-content .coupon {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
+}
+
+.promo-banner {
+    height: 220px;
 }
 
 .promo-slider {
-    height: 200px;
+    height: 300px;
 }
 
 .promo-slider-nav {
@@ -3435,15 +3438,15 @@ select:focus {
 }
 
 .banner-content h3 {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
 }
 
 .banner-content .discount {
-    font-size: 1.3rem;
+    font-size: 1.6rem;
 }
 
 .banner-content .period,
 .banner-content .target,
 .banner-content .coupon {
-    font-size: 0.75rem;
+    font-size: 0.85rem;
 }
